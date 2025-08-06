@@ -49,11 +49,11 @@ jobs:
         run: mvn io.qameta.allure:allure-maven:report
 
       - name: Upload Allure report
-  if: always()
-  uses: actions/upload-artifact@v4
-  with:
-    name: allure-report
-    path: target/allure-report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: target/allure-report
 
       - name: Upload TestNG reports
         if: always()

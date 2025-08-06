@@ -40,6 +40,7 @@ jobs:
           curl --retry 10 --retry-delay 3 --retry-connrefused http://localhost:8000/health
 
       - name: Run Rest Assured tests
+        working-directory: ./ResAssured_Playground
         run: mvn clean test
 
       - name: Upload TestNG reports
@@ -47,4 +48,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: test-reports
-          path: target/surefire-reports
+          path: ResAssured_Playground/target/surefire-reports

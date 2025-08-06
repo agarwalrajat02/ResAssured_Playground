@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Aug 06 16:38:16 IST 2025</td>
+<td>Started on:</td><td>Wed Aug 06 19:23:06 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>3 seconds (3539 ms)</td>
+<tr><td>Total time:</td><td>3 seconds (3165 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,20 +76,30 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.pacakge.rest_assured_framework.DeleteBookApi.shouldDeleteBookSuccessfully()'><b>shouldDeleteBookSuccessfully</b><br>Test class: com.pacakge.rest_assured_framework.DeleteBookApi</td>
-<td></td>
-<td>2</td>
-<td>com.pacakge.rest_assured_framework.DeleteBookApi@3b0fe47a</td></tr>
-<tr>
-<td title='com.pacakge.rest_assured_framework.DeleteBookApi.shouldFailWithInvalidBookId()'><b>shouldFailWithInvalidBookId</b><br>Test class: com.pacakge.rest_assured_framework.DeleteBookApi</td>
+<td title='com.pacakge.rest_assured_framework.HealthCheckAPI.shouldNotAllowPostMethod()'><b>shouldNotAllowPostMethod</b><br>Test class: com.pacakge.rest_assured_framework.HealthCheckAPI<br>Test method: Verify POST on /health returns 405</td>
 <td></td>
 <td>0</td>
-<td>com.pacakge.rest_assured_framework.DeleteBookApi@3b0fe47a</td></tr>
+<td>com.pacakge.rest_assured_framework.HealthCheckAPI@2034b64c</td></tr>
 <tr>
-<td title='com.pacakge.rest_assured_framework.DeleteBookApi.shouldFailWithoutAuthToken()'><b>shouldFailWithoutAuthToken</b><br>Test class: com.pacakge.rest_assured_framework.DeleteBookApi</td>
+<td title='com.pacakge.rest_assured_framework.HealthCheckAPI.shouldReturnStatus200()'><b>shouldReturnStatus200</b><br>Test class: com.pacakge.rest_assured_framework.HealthCheckAPI<br>Test method: Verify GET /health returns 200</td>
+<td></td>
+<td>1</td>
+<td>com.pacakge.rest_assured_framework.HealthCheckAPI@2034b64c</td></tr>
+<tr>
+<td title='com.pacakge.rest_assured_framework.HealthCheckAPI.shouldContainStatusKey()'><b>shouldContainStatusKey</b><br>Test class: com.pacakge.rest_assured_framework.HealthCheckAPI<br>Test method: Verify /health JSON contains 'status' key</td>
 <td></td>
 <td>0</td>
-<td>com.pacakge.rest_assured_framework.DeleteBookApi@3b0fe47a</td></tr>
+<td>com.pacakge.rest_assured_framework.HealthCheckAPI@2034b64c</td></tr>
+<tr>
+<td title='com.pacakge.rest_assured_framework.HealthCheckAPI.shouldReturnStatusValueUp()'><b>shouldReturnStatusValueUp</b><br>Test class: com.pacakge.rest_assured_framework.HealthCheckAPI<br>Test method: Verify status value is 'up'</td>
+<td></td>
+<td>0</td>
+<td>com.pacakge.rest_assured_framework.HealthCheckAPI@2034b64c</td></tr>
+<tr>
+<td title='com.pacakge.rest_assured_framework.HealthCheckAPI.shouldReturn404ForInvalidEndpoint()'><b>shouldReturn404ForInvalidEndpoint</b><br>Test class: com.pacakge.rest_assured_framework.HealthCheckAPI<br>Test method: Verify GET /healthz returns 404</td>
+<td></td>
+<td>0</td>
+<td>com.pacakge.rest_assured_framework.HealthCheckAPI@2034b64c</td></tr>
 </table><p>
 </body>
 </html>

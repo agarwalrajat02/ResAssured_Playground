@@ -4,6 +4,16 @@
     <classes>
       <class name="com.pacakge.rest_assured_framework.HealthCheckAPI"/>
       <class name="com.pacakge.rest_assured_framework.SignUpAPI"/>
+      <class name="com.pacakge.rest_assured_framework.GetAllBooksApi"/>
+      <class name="com.pacakge.rest_assured_framework.CreateBookApi"/>
+      <class name="com.pacakge.rest_assured_framework.GetBookByIdApi"/>
+      <class name="com.pacakge.rest_assured_framework.UpdateBookApi"/>
+      <class name="com.pacakge.rest_assured_framework.DeleteBookApi"/>
+      
+      
+      
+      
+      
     </classes>
   </test>
 </suite>

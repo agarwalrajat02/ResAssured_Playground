@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MySuite">
+  <test name="HealthCheckTest">
+    <classes>
+      <class name="com.pacakge.rest_assured_framework.HealthCheckAPI"/>
+      <class name="com.pacakge.rest_assured_framework.SignUpAPI"/>
+    </classes>
+  </test>
+</suite>

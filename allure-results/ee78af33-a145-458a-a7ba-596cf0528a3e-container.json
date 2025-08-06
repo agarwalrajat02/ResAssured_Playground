@@ -1,0 +1,1 @@
+{"uuid":"ee78af33-a145-458a-a7ba-596cf0528a3e","name":"com.pacakge.rest_assured_framework.LoginApi","children":["0b013593-b45c-4c18-b233-d9379404adaf"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1754471874389,"stop":1754471874864}],"afters":[],"start":1754471874362,"stop":1754471877489}

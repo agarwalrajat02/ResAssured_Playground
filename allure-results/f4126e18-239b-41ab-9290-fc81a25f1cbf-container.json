@@ -1,0 +1,1 @@
+{"uuid":"f4126e18-239b-41ab-9290-fc81a25f1cbf","name":"com.pacakge.rest_assured_framework.CreateBookApi","children":["bacac70b-f9c1-49e4-871d-e48c2ff21c3b"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1754471628136,"stop":1754471628630}],"afters":[],"start":1754471628107,"stop":1754471631325}

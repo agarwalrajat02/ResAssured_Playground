@@ -42,8 +42,11 @@ jobs:
       - name: Run Rest Assured tests
         run: mvn clean test
 
+      - name: Check if Allure results were generated
+        run: ls -la allure-results || echo "No allure-results directory found"
+
       - name: Generate Allure report
-        run: mvn allure:report
+        run: mvn io.qameta.allure:allure-maven:report
 
       - name: Upload Allure report
         if: always()

@@ -1,0 +1,25 @@
+# macOS system files
+.DS_Store
+
+# Eclipse/IntelliJ project files
+.project
+.classpath
+.settings/
+.idea/
+*.iml
+
+# Maven build directory
+target/
+
+# TestNG test output
+test-output/
+
+# Allure reports
+allure-results/
+allure-report/
+
+# Logs
+*.log
+
+# GitHub-specific
+.github/.DS_Store

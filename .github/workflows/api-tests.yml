@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Set up JDK 17
@@ -27,7 +27,19 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-maven-
 
-      - name: Run tests with Maven
+      - name: Build FastAPI Docker image
+        run: docker build -t bookstore-api ./bookstore
+
+      - name: Run FastAPI Docker container
+        run: docker run -d -p 8000:8000 --name bookstore-api bookstore-api
+
+      - name: Wait for FastAPI to be ready
+        run: |
+          echo "Waiting for API to be available..."
+          sleep 10
+          curl --retry 10 --retry-delay 3 --retry-connrefused http://localhost:8000/health
+
+      - name: Run Rest Assured tests
         run: mvn clean test
 
       - name: Upload TestNG reports

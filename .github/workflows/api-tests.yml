@@ -78,7 +78,9 @@ jobs:
         run: npm install -g allure-commandline --force
 
       - name: Run Rest Assured tests with TestNG and generate coverage
-        run: mvn clean verify -DsuiteXmlFile=testng.xml
+        # The 'jacoco:report' goal is added here to explicitly generate the JaCoCo report.
+        # The `target/site/jacoco` directory should now be created successfully.
+        run: mvn clean verify -DsuiteXmlFile=testng.xml jacoco:report
         env:
           BASE_URL: ${{ env.BASE_URL }}
         continue-on-error: true

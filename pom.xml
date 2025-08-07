@@ -79,11 +79,24 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.2.5</version>
         <configuration>
+          <!-- Specify the test suite file -->
           <suiteXmlFiles>
             <suiteXmlFile>testng.xml</suiteXmlFile>
           </suiteXmlFiles>
+          
+          <!-- This is the critical part: tell Maven to use the Allure listener -->
+          <properties>
+            <property>
+              <name>listeners</name>
+              <value>io.qameta.allure.testng.AllureTestNg</value>
+            </property>
+          </properties>
+
+          <!-- Set the output directory for Allure results -->
           <systemPropertyVariables>
-            <allure.results.directory>allure-results</allure.results.directory>
+            <allure.results.directory>
+              ${project.basedir}/target/allure-results
+            </allure.results.directory>
           </systemPropertyVariables>
         </configuration>
       </plugin>

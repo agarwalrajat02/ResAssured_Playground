@@ -20,17 +20,35 @@ public class BaseClass {
             }
 
             prop.load(input);
-            String env = prop.getProperty("env", "dev").toLowerCase();
 
-            if (env.equals("qa")) {
-                baseUrl = prop.getProperty("qa.url");
-            } else if (env.equals("stage")) {
-                baseUrl = prop.getProperty("stage.url");
-            } else if (env.equals("prod")) {
-                baseUrl = prop.getProperty("prod.url");
-            } else {
-                baseUrl = prop.getProperty("dev.url");
+            // Get env from system property > env var > config file
+            String env = System.getProperty("env");
+            if (env == null || env.isEmpty()) {
+                env = System.getenv("TARGET_ENV");
             }
+            if (env == null || env.isEmpty()) {
+                env = prop.getProperty("env", "dev");
+            }
+
+            env = env.toLowerCase(); // Normalize
+
+            switch (env) {
+                case "qa":
+                    baseUrl = prop.getProperty("qa.url");
+                    break;
+                case "stage":
+                    baseUrl = prop.getProperty("stage.url");
+                    break;
+                case "prod":
+                    baseUrl = prop.getProperty("prod.url");
+                    break;
+                case "dev":
+                default:
+                    baseUrl = prop.getProperty("dev.url");
+                    break;
+            }
+
+            System.out.println("Running tests against: " + baseUrl);
 
         } catch (IOException e) {
             throw new RuntimeException("Failed to load config.properties: " + e.getMessage());

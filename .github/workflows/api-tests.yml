@@ -77,7 +77,7 @@ jobs:
         run: mvn clean test -DsuiteXmlFile=testng.xml
         env:
           BASE_URL: ${{ env.BASE_URL }}
-        continue-on-error: true # This is the crucial line to add
+        continue-on-error: true
 
       - name: Debug Allure Results Directory
         run: |
@@ -100,6 +100,14 @@ jobs:
           name: allure-report
           path: target/allure-report
           if-no-files-found: warn
+
+      - name: Deploy Allure Report to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: target/allure-report
+          enable_jekyll: true
 
       - name: Upload TestNG Reports
         if: always()

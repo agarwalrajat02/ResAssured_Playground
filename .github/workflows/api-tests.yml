@@ -10,15 +10,11 @@ on:
       environment:
         description: 'Target environment (dev, qa, stage, prod)'
         required: true
-        default: 'dev'
+        default: dev
 
 jobs:
   test:
     runs-on: ubuntu-latest
-
-    env:
-      # Default if workflow_dispatch is not used
-      TARGET_ENV: dev
 
     steps:
       - name: Checkout code
@@ -28,6 +24,8 @@ jobs:
         run: |
           if [ -n "${{ github.event.inputs.environment }}" ]; then
             echo "TARGET_ENV=${{ github.event.inputs.environment }}" >> $GITHUB_ENV
+          else
+            echo "TARGET_ENV=dev" >> $GITHUB_ENV
           fi
 
       - name: Print selected environment
@@ -59,7 +57,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      # Docker build only if environment is dev
       - name: Build FastAPI Docker image (dev only)
         if: env.TARGET_ENV == 'dev'
         run: docker build -t bookstore-api ./bookstore

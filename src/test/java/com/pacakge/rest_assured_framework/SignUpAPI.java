@@ -8,6 +8,9 @@ import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class SignUpAPI extends BaseClass {
 
     // HTTP Status Codes
@@ -19,11 +22,13 @@ public class SignUpAPI extends BaseClass {
     // Expected Messages
     private static final String MSG_SUCCESS = "user created successfully";
     private static final String MSG_ALREADY_EXISTS = "already"; // matches "Email already registered"
-    private static final String MSG_REQUIRED = "required"; // matches "required"
+    private static final String MSG_REQUIRED = "required"; // matches "required" or "field required"
     private static final String MSG_INVALID_EMAIL = "email";
     private static final String MSG_INTERNAL_SERVER_ERROR = "Internal Server Error";
-    private static final String MSG_PASSWORD_TOO_SHORT = "password is too short"; // A more specific message
-    private static final String MSG_INVALID_PASSWORD = "invalid password"; // A more specific message
+    private static final String MSG_PASSWORD_TOO_SHORT = "password is too short";
+    private static final String MSG_INVALID_PASSWORD = "invalid password";
+    private static final String MSG_INVALID_CREDENTIALS = "Invalid username/password";
+    private static final String MSG_INVALID_INPUT = "Input payload validation failed";
 
     private void logTestStart(String testName) {
         System.out.println("\n==============================");
@@ -43,7 +48,13 @@ public class SignUpAPI extends BaseClass {
         if (response.getBody().asString().contains("message")) {
             message = response.jsonPath().getString("message");
         } else if (response.getBody().asString().contains("detail")) {
-            message = response.jsonPath().getString("detail");
+            // Check if 'detail' is a simple string or a JSON object
+            try {
+                message = response.jsonPath().getString("detail");
+            } catch (Exception e) {
+                // If it's a list or map, convert it to a string for assertion
+                message = response.jsonPath().get("detail").toString();
+            }
         } else {
             message = response.getBody().asString();
         }
@@ -56,7 +67,7 @@ public class SignUpAPI extends BaseClass {
     }
 
     // --- Positive Test Cases ---
-    
+
     @Test(priority = 1)
     public void testSignupSuccess() {
         logTestStart("testSignupSuccess");
@@ -99,10 +110,8 @@ public class SignUpAPI extends BaseClass {
         String password = InputConstants.Signup_Password;
 
         Response response = SignUpUser.signUpUser(email, password);
-        assertResponse(response, STATUS_BAD_REQUEST, MSG_INVALID_EMAIL); // Expecting invalid email or required
+        assertResponse(response, STATUS_BAD_REQUEST, MSG_INVALID_EMAIL);
     }
-    
-   
 
     @Test(priority = 5)
     public void testSignupWithInvalidEmailFormat() {
@@ -114,30 +123,76 @@ public class SignUpAPI extends BaseClass {
         assertResponse(response, STATUS_BAD_REQUEST, MSG_INVALID_EMAIL);
     }
 
-    
-    
-    
-    // --- Edge Cases and Security Tests ---
-
     @Test(priority = 6)
-    public void testSignupWithVeryLongEmail() {
-        logTestStart("testSignupWithVeryLongEmail");
-        String longEmail = "a".repeat(250) + "@longdomain.com";
-        String password = InputConstants.Signup_Password;
+    public void testSignupWithEmptyPassword() {
+        logTestStart("testSignupWithEmptyPassword");
+        String email = RandomDataGenerator.generateUniqueEmail(InputConstants.SignUp_Name);
+        String password = "";
 
-        Response response = SignUpUser.signUpUser(longEmail, password);
-        assertResponse(response, STATUS_BAD_REQUEST, MSG_INVALID_EMAIL); // Or a message indicating the field is too long
+        Response response = SignUpUser.signUpUser(email, password);
+        assertResponse(response, STATUS_BAD_REQUEST, MSG_REQUIRED);
     }
 
-   
-
     @Test(priority = 7)
+    public void testSignupWithNullPassword() {
+        logTestStart("testSignupWithNullPassword");
+        String email = RandomDataGenerator.generateUniqueEmail(InputConstants.SignUp_Name);
+        String password = null;
+
+        Response response = SignUpUser.signUpUser(email, password);
+        assertResponse(response, STATUS_BAD_REQUEST, MSG_REQUIRED);
+    }
+
+    @Test(priority = 8)
+    public void testSignupWithShortPassword() {
+        logTestStart("testSignupWithShortPassword");
+        String email = RandomDataGenerator.generateUniqueEmail(InputConstants.SignUp_Name);
+        String shortPassword = "aB1!"; // Assuming min length is > 4
+
+        Response response = SignUpUser.signUpUser(email, shortPassword);
+        assertResponse(response, STATUS_BAD_REQUEST, MSG_PASSWORD_TOO_SHORT);
+    }
+
+    @Test(priority = 9)
+    public void testSignupWithEmptyPayload() {
+        logTestStart("testSignupWithEmptyPayload");
+        Response response = SignUpUser.signUpUser(null, null); // Pass nulls to simulate an empty payload
+        assertResponse(response, STATUS_BAD_REQUEST, MSG_INVALID_INPUT);
+    }
+
+    @Test(priority = 10)
+    public void testSignupWithoutEmail() {
+        logTestStart("testSignupWithoutEmail");
+        String password = InputConstants.Signup_Password;
+        Response response = SignUpUser.signUpUser(null, password); // Omit email
+        assertResponse(response, STATUS_BAD_REQUEST, MSG_REQUIRED);
+    }
+
+    @Test(priority = 11)
+    public void testSignupWithoutPassword() {
+        logTestStart("testSignupWithoutPassword");
+        String email = RandomDataGenerator.generateUniqueEmail(InputConstants.SignUp_Name);
+        Response response = SignUpUser.signUpUser(email, null); // Omit password
+        assertResponse(response, STATUS_BAD_REQUEST, MSG_REQUIRED);
+    }
+
+    @Test(priority = 12)
     public void testSignupWithEmailContainingSpaces() {
         logTestStart("testSignupWithEmailContainingSpaces");
         String emailWithSpaces = "test email@example.com";
         String password = InputConstants.Signup_Password;
 
         Response response = SignUpUser.signUpUser(emailWithSpaces, password);
+        assertResponse(response, STATUS_BAD_REQUEST, MSG_INVALID_EMAIL);
+    }
+
+    @Test(priority = 13)
+    public void testSignupWithVeryLongEmail() {
+        logTestStart("testSignupWithVeryLongEmail");
+        String longEmail = "a".repeat(250) + "@longdomain.com";
+        String password = InputConstants.Signup_Password;
+
+        Response response = SignUpUser.signUpUser(longEmail, password);
         assertResponse(response, STATUS_BAD_REQUEST, MSG_INVALID_EMAIL);
     }
 }

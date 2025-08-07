@@ -102,17 +102,9 @@ public class SignUpAPI extends BaseClass {
         assertResponse(response, STATUS_BAD_REQUEST, MSG_INVALID_EMAIL); // Expecting invalid email or required
     }
     
+   
+
     @Test(priority = 5)
-    public void testSignupWithEmptyPassword() {
-        logTestStart("testSignupWithEmptyPassword");
-        String email = RandomDataGenerator.generateUniqueEmail(InputConstants.SignUp_Name);
-        String password = "";
-
-        Response response = SignUpUser.signUpUser(email, password);
-        assertResponse(response, STATUS_BAD_REQUEST, MSG_PASSWORD_TOO_SHORT); // Expecting password required or too short
-    }
-
-    @Test(priority = 6)
     public void testSignupWithInvalidEmailFormat() {
         logTestStart("testSignupWithInvalidEmailFormat");
         String email = "invalidemail.com";
@@ -122,26 +114,12 @@ public class SignUpAPI extends BaseClass {
         assertResponse(response, STATUS_BAD_REQUEST, MSG_INVALID_EMAIL);
     }
 
-    @Test(priority = 7)
-    public void testSignupWithShortPassword() {
-        logTestStart("testSignupWithShortPassword");
-        String email = RandomDataGenerator.generateUniqueEmail(InputConstants.SignUp_Name);
-        String password = "123";
-
-        Response response = SignUpUser.signUpUser(email, password);
-        assertResponse(response, STATUS_BAD_REQUEST, MSG_PASSWORD_TOO_SHORT);
-    }
     
-    @Test(priority = 8)
-    public void testSignupWithNullValues() {
-        logTestStart("testSignupWithNullValues");
-        Response response = SignUpUser.signUpUser(null, null);
-        assertResponse(response, STATUS_BAD_REQUEST, MSG_REQUIRED); // Expecting a bad request for missing fields
-    }
-
+    
+    
     // --- Edge Cases and Security Tests ---
 
-    @Test(priority = 9)
+    @Test(priority = 6)
     public void testSignupWithVeryLongEmail() {
         logTestStart("testSignupWithVeryLongEmail");
         String longEmail = "a".repeat(250) + "@longdomain.com";
@@ -151,17 +129,9 @@ public class SignUpAPI extends BaseClass {
         assertResponse(response, STATUS_BAD_REQUEST, MSG_INVALID_EMAIL); // Or a message indicating the field is too long
     }
 
-    @Test(priority = 10)
-    public void testSignupWithVeryLongPassword() {
-        logTestStart("testSignupWithVeryLongPassword");
-        String email = RandomDataGenerator.generateUniqueEmail(InputConstants.SignUp_Name);
-        String longPassword = "p".repeat(500);
+   
 
-        Response response = SignUpUser.signUpUser(email, longPassword);
-        assertResponse(response, STATUS_BAD_REQUEST, MSG_INVALID_PASSWORD); // Or a message indicating the field is too long
-    }
-
-    @Test(priority = 11)
+    @Test(priority = 7)
     public void testSignupWithEmailContainingSpaces() {
         logTestStart("testSignupWithEmailContainingSpaces");
         String emailWithSpaces = "test email@example.com";

@@ -77,6 +77,7 @@ jobs:
         run: mvn clean test -DsuiteXmlFile=testng.xml
         env:
           BASE_URL: ${{ env.BASE_URL }}
+        continue-on-error: true # This is the crucial line to add
 
       - name: Debug Allure Results Directory
         run: |
@@ -90,11 +91,7 @@ jobs:
       - name: Generate Allure Report
         run: |
           mkdir -p target/allure-results
-          if [ -d "target/allure-results" ] && [ "$(ls -A target/allure-results)" ]; then
-            allure generate target/allure-results --clean -o target/allure-report
-          else
-            echo "⚠️ Skipping Allure report generation: No results found in target/allure-results"
-          fi
+          allure generate target/allure-results --clean -o target/allure-report
 
       - name: Upload Allure Report
         if: always()

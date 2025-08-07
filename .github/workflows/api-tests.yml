@@ -10,7 +10,10 @@ on:
       environment:
         description: 'Target environment (dev, qa, stage, prod)'
         required: true
-        default: dev
+        default: 'dev'
+
+env:
+  TARGET_ENV: ${{ github.event.inputs.environment }}
 
 jobs:
   test:
@@ -18,68 +21,48 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set TARGET_ENV from workflow_dispatch if provided
-        run: |
-          if [ -n "${{ github.event.inputs.environment }}" ]; then
-            echo "TARGET_ENV=${{ github.event.inputs.environment }}" >> $GITHUB_ENV
-          else
-            echo "TARGET_ENV=dev" >> $GITHUB_ENV
-          fi
-
-      - name: Print selected environment
-        run: echo "Selected environment: $TARGET_ENV"
-
-      - name: Set BASE_URL for the environment
-        run: |
-          if [ "$TARGET_ENV" = "prod" ]; then
-            echo "BASE_URL=https://bookstore.yourdomain.com" >> $GITHUB_ENV
-          elif [ "$TARGET_ENV" = "stage" ]; then
-            echo "BASE_URL=http://stage.bookstore.internal" >> $GITHUB_ENV
-          elif [ "$TARGET_ENV" = "qa" ]; then
-            echo "BASE_URL=http://qa.bookstore.internal" >> $GITHUB_ENV
-          else
-            echo "BASE_URL=http://127.0.0.1:8000" >> $GITHUB_ENV
-          fi
+        uses: actions/checkout@v3
 
       - name: Set up JDK 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v3
         with:
           java-version: '17'
           distribution: 'temurin'
 
       - name: Cache Maven dependencies
-        uses: actions/cache@v4
+        uses: actions/cache@v3
         with:
           path: ~/.m2/repository
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
+          restore-keys: ${{ runner.os }}-maven-
 
-      - name: Build FastAPI Docker image (dev only)
-        if: env.TARGET_ENV == 'dev'
+      - name: Set BASE_URL from selected environment
+        run: |
+          echo "Selected environment: ${{ env.TARGET_ENV }}"
+          if [ "${{ env.TARGET_ENV }}" = "prod" ]; then
+            echo "BASE_URL=https://bookstore.yourdomain.com" >> $GITHUB_ENV
+          elif [ "${{ env.TARGET_ENV }}" = "stage" ]; then
+            echo "BASE_URL=http://stage.bookstore.internal" >> $GITHUB_ENV
+          elif [ "${{ env.TARGET_ENV }}" = "qa" ]; then
+            echo "BASE_URL=http://qa.bookstore.internal" >> $GITHUB_ENV
+          else
+            echo "BASE_URL=http://127.0.0.1:8000" >> $GITHUB_ENV
+          fi
+
+      - name: Build FastAPI Docker image (for dev only)
+        if: ${{ env.TARGET_ENV == 'dev' }}
         run: docker build -t bookstore-api ./bookstore
 
-      - name: Run FastAPI Docker container (dev only)
-        if: env.TARGET_ENV == 'dev'
+      - name: Run FastAPI Docker container (for dev only)
+        if: ${{ env.TARGET_ENV == 'dev' }}
         run: docker run -d -p 8000:8000 --name bookstore-api bookstore-api
 
-      - name: Wait for FastAPI to be ready (dev only)
-        if: env.TARGET_ENV == 'dev'
+      - name: Wait for FastAPI to be ready (for dev only)
+        if: ${{ env.TARGET_ENV == 'dev' }}
         run: |
-          echo "Waiting for API to be ready..."
-          sleep 5
-          for i in {1..10}; do
-            if curl -s $BASE_URL/health >/dev/null; then
-              echo "API is up!"
-              exit 0
-            fi
-            echo "API not up yet... retrying in 3s"
-            sleep 3
-          done
-          echo "API did not become ready in time"
-          exit 1
+          echo "Waiting for API to be available..."
+          sleep 10
+          curl --retry 10 --retry-delay 3 --retry-connrefused $BASE_URL/health
 
       - name: Run Rest Assured tests
         run: mvn clean test
@@ -87,12 +70,7 @@ jobs:
           BASE_URL: ${{ env.BASE_URL }}
 
       - name: Check if Allure results were generated
-        run: |
-          if [ -d target/allure-results ]; then
-            echo "Allure results found"
-          else
-            echo "No Allure results directory"
-          fi
+        run: ls -la allure-results || echo "No allure-results directory found"
 
       - name: Generate Allure report
         run: mvn io.qameta.allure:allure-maven:report
@@ -111,8 +89,8 @@ jobs:
           name: test-reports
           path: target/surefire-reports
 
-      - name: Stop and remove Docker container (dev only)
-        if: always() && env.TARGET_ENV == 'dev'
+      - name: Stop and remove Docker container (for dev only)
+        if: ${{ always() && env.TARGET_ENV == 'dev' }}
         run: |
           docker stop bookstore-api || true
           docker rm bookstore-api || true

@@ -95,7 +95,7 @@ jobs:
       - name: Generate Allure Report
         run: |
           mkdir -p target/allure-results
-          allure generate target/allure-results --clean -o target/allure-report
+          allure generate target/allure-results --clean -o target/allure-report --report-url https://agarwalrajat02.github.io/ResAssured_Playground/
 
       - name: Upload Allure Report
         if: always()

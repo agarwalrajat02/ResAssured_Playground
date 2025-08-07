@@ -15,50 +15,126 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
 
     env:
       TARGET_ENV: ${{ github.event.inputs.environment || 'dev' }}
-      JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
-      BASE_URL: https://your-api-url.com
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
-      - name: Set up Java 17
-        uses: actions/setup-java@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
         with:
-          distribution: 'temurin'
           java-version: '17'
+          distribution: 'temurin'
 
-      - name: Cache Maven packages
-        uses: actions/cache@v4
+      - name: Cache Maven dependencies
+        uses: actions/cache@v3
         with:
-          path: |
-            ~/.m2/repository
-            !~/.m2/repository/org/jacoco
+          path: ~/.m2/repository
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-maven
+          restore-keys: ${{ runner.os }}-maven-
 
-      - name: Install dependencies
-        run: mvn clean install -DskipTests
+      - name: Set BASE_URL from selected environment
+        run: |
+          echo "Selected environment: $TARGET_ENV"
+          if [ "$TARGET_ENV" = "prod" ]; then
+            echo "BASE_URL=https://bookstore.yourdomain.com" >> $GITHUB_ENV
+          elif [ "$TARGET_ENV" = "stage" ]; then
+            echo "BASE_URL=http://stage.bookstore.internal" >> $GITHUB_ENV
+          elif [ "$TARGET_ENV" = "qa" ]; then
+            echo "BASE_URL=http://qa.bookstore.internal" >> $GITHUB_ENV
+          else
+            echo "BASE_URL=http://127.0.0.1:8000" >> $GITHUB_ENV
+          fi
 
-      - name: Run Tests with Coverage and Allure Report
-        run: mvn clean test verify -DsuiteXmlFile=testng.xml
+      - name: Build FastAPI Docker image (for dev only)
+        if: env.TARGET_ENV == 'dev'
+        run: docker build -t bookstore-api ./bookstore
+
+      - name: Run FastAPI Docker container (for dev only)
+        if: env.TARGET_ENV == 'dev'
+        run: docker run -d -p 8000:8000 --name bookstore-api bookstore-api
+
+      - name: Wait for FastAPI to be ready (for dev only)
+        if: env.TARGET_ENV == 'dev'
+        run: |
+          echo "Waiting for API to be available..."
+          for i in {1..30}; do
+            if curl -s $BASE_URL/health; then
+              echo "✅ API is up!"
+              break
+            fi
+            echo "⏳ Not ready yet. Retrying..."
+            sleep 3
+          done
+
+      - name: Install Allure CLI
+        run: npm install -g allure-commandline --force
+
+      - name: Run Rest Assured tests with TestNG and generate coverage
+        run: mvn clean verify -DsuiteXmlFile=testng.xml
         env:
           BASE_URL: ${{ env.BASE_URL }}
+        continue-on-error: true
 
-      - name: Generate JaCoCo Code Coverage Report
-        run: mvn jacoco:report
+      - name: Debug Allure Results Directory
+        run: |
+          echo "Contents of target/allure-results:"
+          if [ -d "target/allure-results" ]; then
+            ls -la target/allure-results
+          else
+            echo "❌ 'target/allure-results' directory not found!"
+          fi
+
+      - name: Generate Allure Report
+        run: |
+          allure generate target/allure-results --clean -o target/allure-report --report-url https://agarwalrajat02.github.io/ResAssured_Playground/
 
       - name: Upload Allure Report
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
           path: target/allure-report
+          if-no-files-found: warn
 
-      - name: Upload JaCoCo Code Coverage Report
+      - name: Deploy Allure Report to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: target/allure-report
+          enable_jekyll: false
+
+      - name: Upload TestNG Reports
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: jacoco-coverage-report
+          name: test-reports
+          path: target/surefire-reports
+
+      - name: Upload Allure Results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results
+          path: target/allure-results
+
+      - name: Upload JaCoCo Coverage Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jacoco-report
           path: target/site/jacoco
+
+      - name: Stop and Remove Docker Container (for dev only)
+        if: always() && env.TARGET_ENV == 'dev'
+        run: |
+          docker stop bookstore-api || true
+          docker rm bookstore-api || true

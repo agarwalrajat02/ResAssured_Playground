@@ -12,12 +12,13 @@ on:
         required: true
         default: 'dev'
 
-env:
-  TARGET_ENV: ${{ github.event.inputs.environment }}
-
 jobs:
   test:
     runs-on: ubuntu-latest
+
+    env:
+      # Provide a default
+      TARGET_ENV: ${{ github.event.inputs.environment || 'dev' }}
 
     steps:
       - name: Checkout code
@@ -38,31 +39,37 @@ jobs:
 
       - name: Set BASE_URL from selected environment
         run: |
-          echo "Selected environment: ${{ env.TARGET_ENV }}"
-          if [ "${{ env.TARGET_ENV }}" = "prod" ]; then
+          echo "Selected environment: $TARGET_ENV"
+          if [ "$TARGET_ENV" = "prod" ]; then
             echo "BASE_URL=https://bookstore.yourdomain.com" >> $GITHUB_ENV
-          elif [ "${{ env.TARGET_ENV }}" = "stage" ]; then
+          elif [ "$TARGET_ENV" = "stage" ]; then
             echo "BASE_URL=http://stage.bookstore.internal" >> $GITHUB_ENV
-          elif [ "${{ env.TARGET_ENV }}" = "qa" ]; then
+          elif [ "$TARGET_ENV" = "qa" ]; then
             echo "BASE_URL=http://qa.bookstore.internal" >> $GITHUB_ENV
           else
             echo "BASE_URL=http://127.0.0.1:8000" >> $GITHUB_ENV
           fi
 
       - name: Build FastAPI Docker image (for dev only)
-        if: ${{ env.TARGET_ENV == 'dev' }}
+        if: env.TARGET_ENV == 'dev'
         run: docker build -t bookstore-api ./bookstore
 
       - name: Run FastAPI Docker container (for dev only)
-        if: ${{ env.TARGET_ENV == 'dev' }}
+        if: env.TARGET_ENV == 'dev'
         run: docker run -d -p 8000:8000 --name bookstore-api bookstore-api
 
       - name: Wait for FastAPI to be ready (for dev only)
-        if: ${{ env.TARGET_ENV == 'dev' }}
+        if: env.TARGET_ENV == 'dev'
         run: |
           echo "Waiting for API to be available..."
-          sleep 10
-          curl --retry 10 --retry-delay 3 --retry-connrefused $BASE_URL/health
+          for i in {1..30}; do
+            if curl -s $BASE_URL/health; then
+              echo "API is up!"
+              break
+            fi
+            echo "Not ready yet. Retrying..."
+            sleep 3
+          done
 
       - name: Run Rest Assured tests
         run: mvn clean test
@@ -90,7 +97,7 @@ jobs:
           path: target/surefire-reports
 
       - name: Stop and remove Docker container (for dev only)
-        if: ${{ always() && env.TARGET_ENV == 'dev' }}
+        if: always() && env.TARGET_ENV == 'dev'
         run: |
           docker stop bookstore-api || true
           docker rm bookstore-api || true

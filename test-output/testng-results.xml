@@ -1,39 +1,892 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="51" passed="38" failed="13" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-06T16:38:16 IST" name="Default suite" finished-at="2025-08-06T16:38:20 IST" duration-ms="3539">
+  <suite started-at="2025-08-18T14:21:22 IST" name="MySuite" finished-at="2025-08-18T14:21:30 IST" duration-ms="8804">
     <groups>
       <group name="negative">
-        <method signature="DeleteBookApi.shouldFailWithInvalidBookId()[pri:2, instance:com.pacakge.rest_assured_framework.DeleteBookApi@3b0fe47a]" name="shouldFailWithInvalidBookId" class="com.pacakge.rest_assured_framework.DeleteBookApi"/>
-        <method signature="DeleteBookApi.shouldFailWithoutAuthToken()[pri:3, instance:com.pacakge.rest_assured_framework.DeleteBookApi@3b0fe47a]" name="shouldFailWithoutAuthToken" class="com.pacakge.rest_assured_framework.DeleteBookApi"/>
+        <method signature="CreateBookApi.shouldFailWhenNameIsMissing()[pri:2, instance:com.pacakge.rest_assured_framework.CreateBookApi@70ed52de]" name="shouldFailWhenNameIsMissing" class="com.pacakge.rest_assured_framework.CreateBookApi"/>
+        <method signature="DeleteBookApi.shouldFailWithInvalidBookId()[pri:2, instance:com.pacakge.rest_assured_framework.DeleteBookApi@7188af83]" name="shouldFailWithInvalidBookId" class="com.pacakge.rest_assured_framework.DeleteBookApi"/>
+        <method signature="GetAllBooksApi.shouldFailWithoutAuthToken()[pri:2, instance:com.pacakge.rest_assured_framework.GetAllBooksApi@5ddeb7cb]" name="shouldFailWithoutAuthToken" class="com.pacakge.rest_assured_framework.GetAllBooksApi"/>
+        <method signature="GetBookByIdApi.shouldReturnNotFoundForInvalidId()[pri:2, instance:com.pacakge.rest_assured_framework.GetBookByIdApi@496bc455]" name="shouldReturnNotFoundForInvalidId" class="com.pacakge.rest_assured_framework.GetBookByIdApi"/>
+        <method signature="LoginApi.loginWithInvalidEmail()[pri:2, instance:com.pacakge.rest_assured_framework.LoginApi@183ec003]" name="loginWithInvalidEmail" class="com.pacakge.rest_assured_framework.LoginApi"/>
+        <method signature="UpdateBookApi.shouldFailForInvalidBookId()[pri:2, instance:com.pacakge.rest_assured_framework.UpdateBookApi@59402b8f]" name="shouldFailForInvalidBookId" class="com.pacakge.rest_assured_framework.UpdateBookApi"/>
+        <method signature="CreateBookApi.shouldFailWithInvalidPublishedYear()[pri:3, instance:com.pacakge.rest_assured_framework.CreateBookApi@70ed52de]" name="shouldFailWithInvalidPublishedYear" class="com.pacakge.rest_assured_framework.CreateBookApi"/>
+        <method signature="DeleteBookApi.shouldFailWithoutAuthToken()[pri:3, instance:com.pacakge.rest_assured_framework.DeleteBookApi@7188af83]" name="shouldFailWithoutAuthToken" class="com.pacakge.rest_assured_framework.DeleteBookApi"/>
+        <method signature="GetAllBooksApi.shouldFailWithInvalidToken()[pri:3, instance:com.pacakge.rest_assured_framework.GetAllBooksApi@5ddeb7cb]" name="shouldFailWithInvalidToken" class="com.pacakge.rest_assured_framework.GetAllBooksApi"/>
+        <method signature="GetBookByIdApi.shouldReturnBadRequestForNonNumericId()[pri:3, instance:com.pacakge.rest_assured_framework.GetBookByIdApi@496bc455]" name="shouldReturnBadRequestForNonNumericId" class="com.pacakge.rest_assured_framework.GetBookByIdApi"/>
+        <method signature="LoginApi.loginWithInvalidPassword()[pri:3, instance:com.pacakge.rest_assured_framework.LoginApi@183ec003]" name="loginWithInvalidPassword" class="com.pacakge.rest_assured_framework.LoginApi"/>
+        <method signature="UpdateBookApi.shouldFailWhenRequiredFieldMissing()[pri:3, instance:com.pacakge.rest_assured_framework.UpdateBookApi@59402b8f]" name="shouldFailWhenRequiredFieldMissing" class="com.pacakge.rest_assured_framework.UpdateBookApi"/>
+        <method signature="CreateBookApi.shouldFailWithDuplicateId()[pri:4, instance:com.pacakge.rest_assured_framework.CreateBookApi@70ed52de]" name="shouldFailWithDuplicateId" class="com.pacakge.rest_assured_framework.CreateBookApi"/>
+        <method signature="GetBookByIdApi.shouldReturnUnauthorizedWhenTokenIsMissing()[pri:4, instance:com.pacakge.rest_assured_framework.GetBookByIdApi@496bc455]" name="shouldReturnUnauthorizedWhenTokenIsMissing" class="com.pacakge.rest_assured_framework.GetBookByIdApi"/>
+        <method signature="LoginApi.loginWithBlankEmail()[pri:4, instance:com.pacakge.rest_assured_framework.LoginApi@183ec003]" name="loginWithBlankEmail" class="com.pacakge.rest_assured_framework.LoginApi"/>
+        <method signature="UpdateBookApi.shouldFailWithoutToken()[pri:4, instance:com.pacakge.rest_assured_framework.UpdateBookApi@59402b8f]" name="shouldFailWithoutToken" class="com.pacakge.rest_assured_framework.UpdateBookApi"/>
+        <method signature="CreateBookApi.shouldFailWithEmptyPayload()[pri:5, instance:com.pacakge.rest_assured_framework.CreateBookApi@70ed52de]" name="shouldFailWithEmptyPayload" class="com.pacakge.rest_assured_framework.CreateBookApi"/>
+        <method signature="GetAllBooksApi.shouldReturn404ForInvalidEndpoint()[pri:5, instance:com.pacakge.rest_assured_framework.GetAllBooksApi@5ddeb7cb]" name="shouldReturn404ForInvalidEndpoint" class="com.pacakge.rest_assured_framework.GetAllBooksApi"/>
+        <method signature="LoginApi.loginWithBlankPassword()[pri:5, instance:com.pacakge.rest_assured_framework.LoginApi@183ec003]" name="loginWithBlankPassword" class="com.pacakge.rest_assured_framework.LoginApi"/>
+        <method signature="UpdateBookApi.shouldFailWithInvalidToken()[pri:5, instance:com.pacakge.rest_assured_framework.UpdateBookApi@59402b8f]" name="shouldFailWithInvalidToken" class="com.pacakge.rest_assured_framework.UpdateBookApi"/>
+        <method signature="LoginApi.loginWithBlankFields()[pri:6, instance:com.pacakge.rest_assured_framework.LoginApi@183ec003]" name="loginWithBlankFields" class="com.pacakge.rest_assured_framework.LoginApi"/>
+        <method signature="LoginApi.loginWithMissingEmailField()[pri:7, instance:com.pacakge.rest_assured_framework.LoginApi@183ec003]" name="loginWithMissingEmailField" class="com.pacakge.rest_assured_framework.LoginApi"/>
+        <method signature="LoginApi.loginWithMissingPasswordField()[pri:8, instance:com.pacakge.rest_assured_framework.LoginApi@183ec003]" name="loginWithMissingPasswordField" class="com.pacakge.rest_assured_framework.LoginApi"/>
+        <method signature="LoginApi.loginWithExtraField()[pri:9, instance:com.pacakge.rest_assured_framework.LoginApi@183ec003]" name="loginWithExtraField" class="com.pacakge.rest_assured_framework.LoginApi"/>
+        <method signature="LoginApi.loginWithMalformedJson()[pri:10, instance:com.pacakge.rest_assured_framework.LoginApi@183ec003]" name="loginWithMalformedJson" class="com.pacakge.rest_assured_framework.LoginApi"/>
+        <method signature="LoginApi.loginWithSqlInjectionInPassword()[pri:11, instance:com.pacakge.rest_assured_framework.LoginApi@183ec003]" name="loginWithSqlInjectionInPassword" class="com.pacakge.rest_assured_framework.LoginApi"/>
       </group> <!-- negative -->
       <group name="sanity">
-        <method signature="DeleteBookApi.shouldDeleteBookSuccessfully()[pri:1, instance:com.pacakge.rest_assured_framework.DeleteBookApi@3b0fe47a]" name="shouldDeleteBookSuccessfully" class="com.pacakge.rest_assured_framework.DeleteBookApi"/>
+        <method signature="CreateBookApi.shouldCreateBookSuccessfully()[pri:1, instance:com.pacakge.rest_assured_framework.CreateBookApi@70ed52de]" name="shouldCreateBookSuccessfully" class="com.pacakge.rest_assured_framework.CreateBookApi"/>
+        <method signature="DeleteBookApi.shouldDeleteBookSuccessfully()[pri:1, instance:com.pacakge.rest_assured_framework.DeleteBookApi@7188af83]" name="shouldDeleteBookSuccessfully" class="com.pacakge.rest_assured_framework.DeleteBookApi"/>
+        <method signature="GetAllBooksApi.shouldReturnAllBooksSuccessfully()[pri:1, instance:com.pacakge.rest_assured_framework.GetAllBooksApi@5ddeb7cb]" name="shouldReturnAllBooksSuccessfully" class="com.pacakge.rest_assured_framework.GetAllBooksApi"/>
+        <method signature="GetBookByIdApi.shouldGetBookByIdSuccessfully()[pri:1, instance:com.pacakge.rest_assured_framework.GetBookByIdApi@496bc455]" name="shouldGetBookByIdSuccessfully" class="com.pacakge.rest_assured_framework.GetBookByIdApi"/>
+        <method signature="LoginApi.loginWithValidCredentials()[pri:1, instance:com.pacakge.rest_assured_framework.LoginApi@183ec003]" name="loginWithValidCredentials" class="com.pacakge.rest_assured_framework.LoginApi"/>
+        <method signature="UpdateBookApi.shouldUpdateBookSuccessfully()[pri:1, instance:com.pacakge.rest_assured_framework.UpdateBookApi@59402b8f]" name="shouldUpdateBookSuccessfully" class="com.pacakge.rest_assured_framework.UpdateBookApi"/>
+        <method signature="GetAllBooksApi.shouldHaveExpectedFieldsInBooks()[pri:4, instance:com.pacakge.rest_assured_framework.GetAllBooksApi@5ddeb7cb]" name="shouldHaveExpectedFieldsInBooks" class="com.pacakge.rest_assured_framework.GetAllBooksApi"/>
       </group> <!-- sanity -->
       <group name="positive">
-        <method signature="DeleteBookApi.shouldDeleteBookSuccessfully()[pri:1, instance:com.pacakge.rest_assured_framework.DeleteBookApi@3b0fe47a]" name="shouldDeleteBookSuccessfully" class="com.pacakge.rest_assured_framework.DeleteBookApi"/>
+        <method signature="CreateBookApi.shouldCreateBookSuccessfully()[pri:1, instance:com.pacakge.rest_assured_framework.CreateBookApi@70ed52de]" name="shouldCreateBookSuccessfully" class="com.pacakge.rest_assured_framework.CreateBookApi"/>
+        <method signature="DeleteBookApi.shouldDeleteBookSuccessfully()[pri:1, instance:com.pacakge.rest_assured_framework.DeleteBookApi@7188af83]" name="shouldDeleteBookSuccessfully" class="com.pacakge.rest_assured_framework.DeleteBookApi"/>
+        <method signature="GetAllBooksApi.shouldReturnAllBooksSuccessfully()[pri:1, instance:com.pacakge.rest_assured_framework.GetAllBooksApi@5ddeb7cb]" name="shouldReturnAllBooksSuccessfully" class="com.pacakge.rest_assured_framework.GetAllBooksApi"/>
+        <method signature="GetBookByIdApi.shouldGetBookByIdSuccessfully()[pri:1, instance:com.pacakge.rest_assured_framework.GetBookByIdApi@496bc455]" name="shouldGetBookByIdSuccessfully" class="com.pacakge.rest_assured_framework.GetBookByIdApi"/>
+        <method signature="LoginApi.loginWithValidCredentials()[pri:1, instance:com.pacakge.rest_assured_framework.LoginApi@183ec003]" name="loginWithValidCredentials" class="com.pacakge.rest_assured_framework.LoginApi"/>
+        <method signature="UpdateBookApi.shouldUpdateBookSuccessfully()[pri:1, instance:com.pacakge.rest_assured_framework.UpdateBookApi@59402b8f]" name="shouldUpdateBookSuccessfully" class="com.pacakge.rest_assured_framework.UpdateBookApi"/>
+        <method signature="GetAllBooksApi.shouldHaveExpectedFieldsInBooks()[pri:4, instance:com.pacakge.rest_assured_framework.GetAllBooksApi@5ddeb7cb]" name="shouldHaveExpectedFieldsInBooks" class="com.pacakge.rest_assured_framework.GetAllBooksApi"/>
       </group> <!-- positive -->
     </groups>
-    <test started-at="2025-08-06T16:38:16 IST" name="Default test" finished-at="2025-08-06T16:38:20 IST" duration-ms="3539">
-      <class name="com.pacakge.rest_assured_framework.DeleteBookApi">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.pacakge.rest_assured_framework.DeleteBookApi@3b0fe47a]" started-at="2025-08-06T16:38:16 IST" name="setup" finished-at="2025-08-06T16:38:17 IST" duration-ms="494" status="PASS">
+    <test started-at="2025-08-18T14:21:22 IST" name="Integration" finished-at="2025-08-18T14:21:30 IST" duration-ms="8804">
+      <class name="com.pacakge.rest_assured_framework.GetBookByIdApi">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.pacakge.rest_assured_framework.GetBookByIdApi@496bc455]" started-at="2025-08-18T14:21:30 IST" name="setup" finished-at="2025-08-18T14:21:30 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="shouldDeleteBookSuccessfully()[pri:1, instance:com.pacakge.rest_assured_framework.DeleteBookApi@3b0fe47a]" started-at="2025-08-06T16:38:17 IST" name="shouldDeleteBookSuccessfully" finished-at="2025-08-06T16:38:20 IST" duration-ms="2848" status="PASS">
+        <test-method signature="shouldGetBookByIdSuccessfully()[pri:1, instance:com.pacakge.rest_assured_framework.GetBookByIdApi@496bc455]" started-at="2025-08-18T14:21:30 IST" name="shouldGetBookByIdSuccessfully" finished-at="2025-08-18T14:21:30 IST" duration-ms="137" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldGetBookByIdSuccessfully -->
+        <test-method signature="shouldReturnNotFoundForInvalidId()[pri:2, instance:com.pacakge.rest_assured_framework.GetBookByIdApi@496bc455]" started-at="2025-08-18T14:21:30 IST" name="shouldReturnNotFoundForInvalidId" finished-at="2025-08-18T14:21:30 IST" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnNotFoundForInvalidId -->
+        <test-method signature="shouldReturnBadRequestForNonNumericId()[pri:3, instance:com.pacakge.rest_assured_framework.GetBookByIdApi@496bc455]" started-at="2025-08-18T14:21:30 IST" name="shouldReturnBadRequestForNonNumericId" finished-at="2025-08-18T14:21:30 IST" duration-ms="18" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected HTTP 400 expected [400] but found [422]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected HTTP 400 expected [400] but found [422]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.pacakge.rest_assured_framework.GetBookByIdApi.shouldReturnBadRequestForNonNumericId(GetBookByIdApi.java:55)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnBadRequestForNonNumericId -->
+        <test-method signature="shouldReturnUnauthorizedWhenTokenIsMissing()[pri:4, instance:com.pacakge.rest_assured_framework.GetBookByIdApi@496bc455]" started-at="2025-08-18T14:21:30 IST" name="shouldReturnUnauthorizedWhenTokenIsMissing" finished-at="2025-08-18T14:21:30 IST" duration-ms="80" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected HTTP 401 expected [401] but found [403]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected HTTP 401 expected [401] but found [403]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.pacakge.rest_assured_framework.GetBookByIdApi.shouldReturnUnauthorizedWhenTokenIsMissing(GetBookByIdApi.java:68)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnUnauthorizedWhenTokenIsMissing -->
+      </class> <!-- com.pacakge.rest_assured_framework.GetBookByIdApi -->
+      <class name="com.pacakge.rest_assured_framework.DeleteBookApi">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.pacakge.rest_assured_framework.DeleteBookApi@7188af83]" started-at="2025-08-18T14:21:30 IST" name="setup" finished-at="2025-08-18T14:21:30 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="shouldDeleteBookSuccessfully()[pri:1, instance:com.pacakge.rest_assured_framework.DeleteBookApi@7188af83]" started-at="2025-08-18T14:21:30 IST" name="shouldDeleteBookSuccessfully" finished-at="2025-08-18T14:21:30 IST" duration-ms="44" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shouldDeleteBookSuccessfully -->
-        <test-method signature="shouldFailWithInvalidBookId()[pri:2, instance:com.pacakge.rest_assured_framework.DeleteBookApi@3b0fe47a]" started-at="2025-08-06T16:38:20 IST" name="shouldFailWithInvalidBookId" finished-at="2025-08-06T16:38:20 IST" duration-ms="47" status="PASS">
+        <test-method signature="shouldFailWithInvalidBookId()[pri:2, instance:com.pacakge.rest_assured_framework.DeleteBookApi@7188af83]" started-at="2025-08-18T14:21:30 IST" name="shouldFailWithInvalidBookId" finished-at="2025-08-18T14:21:30 IST" duration-ms="30" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shouldFailWithInvalidBookId -->
-        <test-method signature="shouldFailWithoutAuthToken()[pri:3, instance:com.pacakge.rest_assured_framework.DeleteBookApi@3b0fe47a]" started-at="2025-08-06T16:38:20 IST" name="shouldFailWithoutAuthToken" finished-at="2025-08-06T16:38:20 IST" duration-ms="24" status="PASS">
+        <test-method signature="shouldFailWithoutAuthToken()[pri:3, instance:com.pacakge.rest_assured_framework.DeleteBookApi@7188af83]" started-at="2025-08-18T14:21:30 IST" name="shouldFailWithoutAuthToken" finished-at="2025-08-18T14:21:30 IST" duration-ms="30" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shouldFailWithoutAuthToken -->
       </class> <!-- com.pacakge.rest_assured_framework.DeleteBookApi -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.pacakge.rest_assured_framework.GetAllBooksApi">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.pacakge.rest_assured_framework.GetAllBooksApi@5ddeb7cb]" started-at="2025-08-18T14:21:29 IST" name="setup" finished-at="2025-08-18T14:21:29 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="shouldReturnAllBooksSuccessfully()[pri:1, instance:com.pacakge.rest_assured_framework.GetAllBooksApi@5ddeb7cb]" started-at="2025-08-18T14:21:29 IST" name="shouldReturnAllBooksSuccessfully" finished-at="2025-08-18T14:21:29 IST" duration-ms="403" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnAllBooksSuccessfully -->
+        <test-method signature="shouldFailWithoutAuthToken()[pri:2, instance:com.pacakge.rest_assured_framework.GetAllBooksApi@5ddeb7cb]" started-at="2025-08-18T14:21:29 IST" name="shouldFailWithoutAuthToken" finished-at="2025-08-18T14:21:29 IST" duration-ms="33" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldFailWithoutAuthToken -->
+        <test-method signature="shouldFailWithInvalidToken()[pri:3, instance:com.pacakge.rest_assured_framework.GetAllBooksApi@5ddeb7cb]" started-at="2025-08-18T14:21:29 IST" name="shouldFailWithInvalidToken" finished-at="2025-08-18T14:21:29 IST" duration-ms="24" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldFailWithInvalidToken -->
+        <test-method signature="shouldHaveExpectedFieldsInBooks()[pri:4, instance:com.pacakge.rest_assured_framework.GetAllBooksApi@5ddeb7cb]" started-at="2025-08-18T14:21:29 IST" name="shouldHaveExpectedFieldsInBooks" finished-at="2025-08-18T14:21:30 IST" duration-ms="276" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldHaveExpectedFieldsInBooks -->
+        <test-method signature="shouldReturn404ForInvalidEndpoint()[pri:5, instance:com.pacakge.rest_assured_framework.GetAllBooksApi@5ddeb7cb]" started-at="2025-08-18T14:21:30 IST" name="shouldReturn404ForInvalidEndpoint" finished-at="2025-08-18T14:21:30 IST" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturn404ForInvalidEndpoint -->
+      </class> <!-- com.pacakge.rest_assured_framework.GetAllBooksApi -->
+      <class name="com.pacakge.rest_assured_framework.UpdateBookApi">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.pacakge.rest_assured_framework.UpdateBookApi@59402b8f]" started-at="2025-08-18T14:21:30 IST" name="setup" finished-at="2025-08-18T14:21:30 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="shouldUpdateBookSuccessfully()[pri:1, instance:com.pacakge.rest_assured_framework.UpdateBookApi@59402b8f]" started-at="2025-08-18T14:21:30 IST" name="shouldUpdateBookSuccessfully" finished-at="2025-08-18T14:21:30 IST" duration-ms="32" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Status code mismatch expected [200] but found [404]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Status code mismatch expected [200] but found [404]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.pacakge.rest_assured_framework.UpdateBookApi.shouldUpdateBookSuccessfully(UpdateBookApi.java:40)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldUpdateBookSuccessfully -->
+        <test-method signature="shouldFailForInvalidBookId()[pri:2, instance:com.pacakge.rest_assured_framework.UpdateBookApi@59402b8f]" started-at="2025-08-18T14:21:30 IST" name="shouldFailForInvalidBookId" finished-at="2025-08-18T14:21:30 IST" duration-ms="27" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldFailForInvalidBookId -->
+        <test-method signature="shouldFailWhenRequiredFieldMissing()[pri:3, instance:com.pacakge.rest_assured_framework.UpdateBookApi@59402b8f]" started-at="2025-08-18T14:21:30 IST" name="shouldFailWhenRequiredFieldMissing" finished-at="2025-08-18T14:21:30 IST" duration-ms="16" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected 400 for missing required field expected [400] but found [404]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected 400 for missing required field expected [400] but found [404]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.pacakge.rest_assured_framework.UpdateBookApi.shouldFailWhenRequiredFieldMissing(UpdateBookApi.java:90)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldFailWhenRequiredFieldMissing -->
+        <test-method signature="shouldFailWithoutToken()[pri:4, instance:com.pacakge.rest_assured_framework.UpdateBookApi@59402b8f]" started-at="2025-08-18T14:21:30 IST" name="shouldFailWithoutToken" finished-at="2025-08-18T14:21:30 IST" duration-ms="19" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected 401 for missing token expected [401] but found [403]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected 401 for missing token expected [401] but found [403]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.pacakge.rest_assured_framework.UpdateBookApi.shouldFailWithoutToken(UpdateBookApi.java:113)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldFailWithoutToken -->
+        <test-method signature="shouldFailWithInvalidToken()[pri:5, instance:com.pacakge.rest_assured_framework.UpdateBookApi@59402b8f]" started-at="2025-08-18T14:21:30 IST" name="shouldFailWithInvalidToken" finished-at="2025-08-18T14:21:30 IST" duration-ms="22" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected 401 for invalid token expected [401] but found [403]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected 401 for invalid token expected [401] but found [403]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.pacakge.rest_assured_framework.UpdateBookApi.shouldFailWithInvalidToken(UpdateBookApi.java:136)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldFailWithInvalidToken -->
+      </class> <!-- com.pacakge.rest_assured_framework.UpdateBookApi -->
+      <class name="com.pacakge.rest_assured_framework.SignUpAPI">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.pacakge.rest_assured_framework.SignUpAPI@7c137fd5]" started-at="2025-08-18T14:21:25 IST" name="setup" finished-at="2025-08-18T14:21:25 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testSignupSuccess()[pri:1, instance:com.pacakge.rest_assured_framework.SignUpAPI@7c137fd5]" started-at="2025-08-18T14:21:25 IST" name="testSignupSuccess" description="Verify that a new user can successfully sign up with valid email and password." finished-at="2025-08-18T14:21:25 IST" duration-ms="370" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSignupSuccess -->
+        <test-method signature="testSignupWithComplexPassword()[pri:2, instance:com.pacakge.rest_assured_framework.SignUpAPI@7c137fd5]" started-at="2025-08-18T14:21:25 IST" name="testSignupWithComplexPassword" description="Verify signup works with a complex password containing special characters." finished-at="2025-08-18T14:21:25 IST" duration-ms="297" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSignupWithComplexPassword -->
+        <test-method signature="testSignupWithExistingEmail()[pri:3, instance:com.pacakge.rest_assured_framework.SignUpAPI@7c137fd5]" started-at="2025-08-18T14:21:25 IST" name="testSignupWithExistingEmail" description="Verify signup fails for an already registered email." finished-at="2025-08-18T14:21:26 IST" duration-ms="325" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSignupWithExistingEmail -->
+        <test-method signature="testSignupWithEmptyEmail()[pri:4, instance:com.pacakge.rest_assured_framework.SignUpAPI@7c137fd5]" started-at="2025-08-18T14:21:26 IST" name="testSignupWithEmptyEmail" description="Verify signup fails when email is empty." finished-at="2025-08-18T14:21:26 IST" duration-ms="57" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSignupWithEmptyEmail -->
+        <test-method signature="testSignupWithInvalidEmailFormat()[pri:5, instance:com.pacakge.rest_assured_framework.SignUpAPI@7c137fd5]" started-at="2025-08-18T14:21:26 IST" name="testSignupWithInvalidEmailFormat" description="Verify signup fails for invalid email format." finished-at="2025-08-18T14:21:26 IST" duration-ms="41" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSignupWithInvalidEmailFormat -->
+        <test-method signature="testSignupWithEmptyPassword()[pri:6, instance:com.pacakge.rest_assured_framework.SignUpAPI@7c137fd5]" started-at="2025-08-18T14:21:26 IST" name="testSignupWithEmptyPassword" description="Verify signup fails when password is empty." finished-at="2025-08-18T14:21:26 IST" duration-ms="275" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Unexpected status code. Response: {
+    "message": "User created successfully"
+} expected [400] but found [200]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Unexpected status code. Response: {
+    "message": "User created successfully"
+} expected [400] but found [200]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.pacakge.rest_assured_framework.SignUpAPI.assertResponse(SignUpAPI.java:42)
+at com.pacakge.rest_assured_framework.SignUpAPI.testSignupWithEmptyPassword(SignUpAPI.java:145)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSignupWithEmptyPassword -->
+        <test-method signature="testSignupWithNullPassword()[pri:7, instance:com.pacakge.rest_assured_framework.SignUpAPI@7c137fd5]" started-at="2025-08-18T14:21:26 IST" name="testSignupWithNullPassword" description="Verify signup fails when password is null." finished-at="2025-08-18T14:21:26 IST" duration-ms="36" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Unexpected status code. Response: Internal Server Error expected [400] but found [500]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Unexpected status code. Response: Internal Server Error expected [400] but found [500]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.pacakge.rest_assured_framework.SignUpAPI.assertResponse(SignUpAPI.java:42)
+at com.pacakge.rest_assured_framework.SignUpAPI.testSignupWithNullPassword(SignUpAPI.java:158)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSignupWithNullPassword -->
+        <test-method signature="testSignupWithShortPassword()[pri:8, instance:com.pacakge.rest_assured_framework.SignUpAPI@7c137fd5]" started-at="2025-08-18T14:21:26 IST" name="testSignupWithShortPassword" description="Verify signup fails when password is shorter than required length." finished-at="2025-08-18T14:21:26 IST" duration-ms="267" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Unexpected status code. Response: {
+    "message": "User created successfully"
+} expected [400] but found [200]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Unexpected status code. Response: {
+    "message": "User created successfully"
+} expected [400] but found [200]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.pacakge.rest_assured_framework.SignUpAPI.assertResponse(SignUpAPI.java:42)
+at com.pacakge.rest_assured_framework.SignUpAPI.testSignupWithShortPassword(SignUpAPI.java:171)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSignupWithShortPassword -->
+        <test-method signature="testSignupWithEmptyPayload()[pri:9, instance:com.pacakge.rest_assured_framework.SignUpAPI@7c137fd5]" started-at="2025-08-18T14:21:26 IST" name="testSignupWithEmptyPayload" description="Verify signup fails with an empty request payload." finished-at="2025-08-18T14:21:26 IST" duration-ms="37" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Unexpected status code. Response: Internal Server Error expected [400] but found [500]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Unexpected status code. Response: Internal Server Error expected [400] but found [500]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.pacakge.rest_assured_framework.SignUpAPI.assertResponse(SignUpAPI.java:42)
+at com.pacakge.rest_assured_framework.SignUpAPI.testSignupWithEmptyPayload(SignUpAPI.java:181)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSignupWithEmptyPayload -->
+        <test-method signature="testSignupWithoutEmail()[pri:10, instance:com.pacakge.rest_assured_framework.SignUpAPI@7c137fd5]" started-at="2025-08-18T14:21:26 IST" name="testSignupWithoutEmail" description="Verify signup fails when email is missing." finished-at="2025-08-18T14:21:27 IST" duration-ms="276" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Unexpected status code. Response: Internal Server Error expected [400] but found [500]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Unexpected status code. Response: Internal Server Error expected [400] but found [500]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.pacakge.rest_assured_framework.SignUpAPI.assertResponse(SignUpAPI.java:42)
+at com.pacakge.rest_assured_framework.SignUpAPI.testSignupWithoutEmail(SignUpAPI.java:192)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSignupWithoutEmail -->
+        <test-method signature="testSignupWithoutPassword()[pri:11, instance:com.pacakge.rest_assured_framework.SignUpAPI@7c137fd5]" started-at="2025-08-18T14:21:27 IST" name="testSignupWithoutPassword" description="Verify signup fails when password is missing." finished-at="2025-08-18T14:21:27 IST" duration-ms="49" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Unexpected status code. Response: Internal Server Error expected [400] but found [500]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Unexpected status code. Response: Internal Server Error expected [400] but found [500]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.pacakge.rest_assured_framework.SignUpAPI.assertResponse(SignUpAPI.java:42)
+at com.pacakge.rest_assured_framework.SignUpAPI.testSignupWithoutPassword(SignUpAPI.java:203)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSignupWithoutPassword -->
+        <test-method signature="testSignupWithEmailContainingSpaces()[pri:12, instance:com.pacakge.rest_assured_framework.SignUpAPI@7c137fd5]" started-at="2025-08-18T14:21:27 IST" name="testSignupWithEmailContainingSpaces" description="Verify signup fails when email contains spaces." finished-at="2025-08-18T14:21:27 IST" duration-ms="67" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSignupWithEmailContainingSpaces -->
+        <test-method signature="testSignupWithVeryLongEmail()[pri:13, instance:com.pacakge.rest_assured_framework.SignUpAPI@7c137fd5]" started-at="2025-08-18T14:21:27 IST" name="testSignupWithVeryLongEmail" description="Verify signup fails when email exceeds maximum allowed length." finished-at="2025-08-18T14:21:27 IST" duration-ms="36" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSignupWithVeryLongEmail -->
+      </class> <!-- com.pacakge.rest_assured_framework.SignUpAPI -->
+      <class name="com.pacakge.rest_assured_framework.LoginApi">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.pacakge.rest_assured_framework.LoginApi@183ec003]" started-at="2025-08-18T14:21:27 IST" name="setup" finished-at="2025-08-18T14:21:27 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginWithValidCredentials()[pri:1, instance:com.pacakge.rest_assured_framework.LoginApi@183ec003]" started-at="2025-08-18T14:21:27 IST" name="loginWithValidCredentials" description="Verify login succeeds with valid credentials." finished-at="2025-08-18T14:21:27 IST" duration-ms="346" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithValidCredentials -->
+        <test-method signature="loginWithInvalidEmail()[pri:2, instance:com.pacakge.rest_assured_framework.LoginApi@183ec003]" started-at="2025-08-18T14:21:27 IST" name="loginWithInvalidEmail" description="Verify login fails with an unregistered email." finished-at="2025-08-18T14:21:27 IST" duration-ms="32" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInvalidEmail -->
+        <test-method signature="loginWithInvalidPassword()[pri:3, instance:com.pacakge.rest_assured_framework.LoginApi@183ec003]" started-at="2025-08-18T14:21:27 IST" name="loginWithInvalidPassword" description="Verify login fails with incorrect password." finished-at="2025-08-18T14:21:27 IST" duration-ms="282" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInvalidPassword -->
+        <test-method signature="loginWithBlankEmail()[pri:4, instance:com.pacakge.rest_assured_framework.LoginApi@183ec003]" started-at="2025-08-18T14:21:27 IST" name="loginWithBlankEmail" description="Verify login fails when email field is blank." finished-at="2025-08-18T14:21:28 IST" duration-ms="277" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected 4xx for blank email expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected 4xx for blank email expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.pacakge.rest_assured_framework.LoginApi.loginWithBlankEmail(LoginApi.java:65)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithBlankEmail -->
+        <test-method signature="loginWithBlankPassword()[pri:5, instance:com.pacakge.rest_assured_framework.LoginApi@183ec003]" started-at="2025-08-18T14:21:28 IST" name="loginWithBlankPassword" description="Verify login fails when password field is blank." finished-at="2025-08-18T14:21:28 IST" duration-ms="274" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithBlankPassword -->
+        <test-method signature="loginWithBlankFields()[pri:6, instance:com.pacakge.rest_assured_framework.LoginApi@183ec003]" started-at="2025-08-18T14:21:28 IST" name="loginWithBlankFields" description="Verify login fails when both email and password fields are blank." finished-at="2025-08-18T14:21:28 IST" duration-ms="278" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithBlankFields -->
+        <test-method signature="loginWithMissingEmailField()[pri:7, instance:com.pacakge.rest_assured_framework.LoginApi@183ec003]" started-at="2025-08-18T14:21:28 IST" name="loginWithMissingEmailField" description="Verify login fails when email field is missing from payload." finished-at="2025-08-18T14:21:28 IST" duration-ms="29" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithMissingEmailField -->
+        <test-method signature="loginWithMissingPasswordField()[pri:8, instance:com.pacakge.rest_assured_framework.LoginApi@183ec003]" started-at="2025-08-18T14:21:28 IST" name="loginWithMissingPasswordField" description="Verify login fails when password field is missing from payload." finished-at="2025-08-18T14:21:28 IST" duration-ms="25" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithMissingPasswordField -->
+        <test-method signature="loginWithExtraField()[pri:9, instance:com.pacakge.rest_assured_framework.LoginApi@183ec003]" started-at="2025-08-18T14:21:28 IST" name="loginWithExtraField" description="Verify login behavior when an unexpected extra field is sent." finished-at="2025-08-18T14:21:29 IST" duration-ms="274" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithExtraField -->
+        <test-method signature="loginWithMalformedJson()[pri:10, instance:com.pacakge.rest_assured_framework.LoginApi@183ec003]" started-at="2025-08-18T14:21:29 IST" name="loginWithMalformedJson" description="Verify login fails when request JSON is malformed." finished-at="2025-08-18T14:21:29 IST" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithMalformedJson -->
+        <test-method signature="loginWithSqlInjectionInPassword()[pri:11, instance:com.pacakge.rest_assured_framework.LoginApi@183ec003]" started-at="2025-08-18T14:21:29 IST" name="loginWithSqlInjectionInPassword" description="Verify login fails when SQL injection is attempted in the password field." finished-at="2025-08-18T14:21:29 IST" duration-ms="263" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithSqlInjectionInPassword -->
+      </class> <!-- com.pacakge.rest_assured_framework.LoginApi -->
+      <class name="com.pacakge.rest_assured_framework.HealthCheckAPI">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.pacakge.rest_assured_framework.HealthCheckAPI@5b247367]" started-at="2025-08-18T14:21:22 IST" name="setup" finished-at="2025-08-18T14:21:22 IST" duration-ms="479" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="shouldReturnStatus200()[pri:1, instance:com.pacakge.rest_assured_framework.HealthCheckAPI@5b247367]" started-at="2025-08-18T14:21:22 IST" name="shouldReturnStatus200" description="Verify GET /health returns 200" finished-at="2025-08-18T14:21:24 IST" duration-ms="1383" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnStatus200 -->
+        <test-method signature="shouldContainStatusKey()[pri:2, instance:com.pacakge.rest_assured_framework.HealthCheckAPI@5b247367]" started-at="2025-08-18T14:21:24 IST" name="shouldContainStatusKey" description="Verify /health JSON contains &#039;status&#039; key" finished-at="2025-08-18T14:21:24 IST" duration-ms="296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldContainStatusKey -->
+        <test-method signature="shouldReturnStatusValueUp()[pri:3, instance:com.pacakge.rest_assured_framework.HealthCheckAPI@5b247367]" started-at="2025-08-18T14:21:24 IST" name="shouldReturnStatusValueUp" description="Verify status value is &#039;up&#039;" finished-at="2025-08-18T14:21:24 IST" duration-ms="546" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnStatusValueUp -->
+        <test-method signature="shouldNotAllowPostMethod()[pri:4, instance:com.pacakge.rest_assured_framework.HealthCheckAPI@5b247367]" started-at="2025-08-18T14:21:24 IST" name="shouldNotAllowPostMethod" description="Verify POST on /health returns 405" finished-at="2025-08-18T14:21:25 IST" duration-ms="55" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldNotAllowPostMethod -->
+        <test-method signature="shouldReturn404ForInvalidEndpoint()[pri:5, instance:com.pacakge.rest_assured_framework.HealthCheckAPI@5b247367]" started-at="2025-08-18T14:21:25 IST" name="shouldReturn404ForInvalidEndpoint" description="Verify GET /healthz returns 404" finished-at="2025-08-18T14:21:25 IST" duration-ms="22" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturn404ForInvalidEndpoint -->
+      </class> <!-- com.pacakge.rest_assured_framework.HealthCheckAPI -->
+      <class name="com.pacakge.rest_assured_framework.CreateBookApi">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.pacakge.rest_assured_framework.CreateBookApi@70ed52de]" started-at="2025-08-18T14:21:30 IST" name="setup" finished-at="2025-08-18T14:21:30 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="shouldCreateBookSuccessfully()[pri:1, instance:com.pacakge.rest_assured_framework.CreateBookApi@70ed52de]" started-at="2025-08-18T14:21:30 IST" name="shouldCreateBookSuccessfully" finished-at="2025-08-18T14:21:30 IST" duration-ms="59" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldCreateBookSuccessfully -->
+        <test-method signature="shouldFailWhenNameIsMissing()[pri:2, instance:com.pacakge.rest_assured_framework.CreateBookApi@70ed52de]" started-at="2025-08-18T14:21:30 IST" name="shouldFailWhenNameIsMissing" finished-at="2025-08-18T14:21:30 IST" duration-ms="23" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldFailWhenNameIsMissing -->
+        <test-method signature="shouldFailWithInvalidPublishedYear()[pri:3, instance:com.pacakge.rest_assured_framework.CreateBookApi@70ed52de]" started-at="2025-08-18T14:21:30 IST" name="shouldFailWithInvalidPublishedYear" finished-at="2025-08-18T14:21:30 IST" duration-ms="26" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldFailWithInvalidPublishedYear -->
+        <test-method signature="shouldFailWithDuplicateId()[pri:4, instance:com.pacakge.rest_assured_framework.CreateBookApi@70ed52de]" started-at="2025-08-18T14:21:30 IST" name="shouldFailWithDuplicateId" finished-at="2025-08-18T14:21:30 IST" duration-ms="28" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldFailWithDuplicateId -->
+        <test-method signature="shouldFailWithEmptyPayload()[pri:5, instance:com.pacakge.rest_assured_framework.CreateBookApi@70ed52de]" started-at="2025-08-18T14:21:30 IST" name="shouldFailWithEmptyPayload" finished-at="2025-08-18T14:21:30 IST" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldFailWithEmptyPayload -->
+      </class> <!-- com.pacakge.rest_assured_framework.CreateBookApi -->
+    </test> <!-- Integration -->
+  </suite> <!-- MySuite -->
 </testng-results>

@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 13 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,8 +38,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+            <a href="#" panel-name="suite-MySuite" class="navigator-link">
+              <span class="suite-name border-failed">MySuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,37 +49,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>testng-customsuite.xml</span>
+                  <a href="#" panel-name="test-xml-MySuite" class="navigator-link ">
+                    <span>testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="testlist-MySuite" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="group-MySuite" class="navigator-link ">
                     <span>3 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="times-MySuite" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="reporter-MySuite" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="ignored-methods-MySuite" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="chronological-MySuite" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -92,31 +92,280 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">51 methods, 13 failed,   38 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-MySuite" class="hide-methods failed suite-MySuite"> (hide)</a> <!-- hide-methods failed suite-MySuite -->
+                      <a href="#" panel-name="suite-MySuite" class="show-methods failed suite-MySuite"> (show)</a> <!-- show-methods failed suite-MySuite -->
+                    </span>
+                    <div class="method-list-content failed suite-MySuite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.LoginApi" class="method navigator-link" hash-for-method="loginWithBlankEmail">loginWithBlankEmail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.UpdateBookApi" class="method navigator-link" hash-for-method="shouldFailWhenRequiredFieldMissing">shouldFailWhenRequiredFieldMissing</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.UpdateBookApi" class="method navigator-link" hash-for-method="shouldFailWithInvalidToken">shouldFailWithInvalidToken</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.UpdateBookApi" class="method navigator-link" hash-for-method="shouldFailWithoutToken">shouldFailWithoutToken</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.GetBookByIdApi" class="method navigator-link" hash-for-method="shouldReturnBadRequestForNonNumericId">shouldReturnBadRequestForNonNumericId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.GetBookByIdApi" class="method navigator-link" hash-for-method="shouldReturnUnauthorizedWhenTokenIsMissing">shouldReturnUnauthorizedWhenTokenIsMissing</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.UpdateBookApi" class="method navigator-link" hash-for-method="shouldUpdateBookSuccessfully">shouldUpdateBookSuccessfully</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.SignUpAPI" class="method navigator-link" hash-for-method="testSignupWithEmptyPassword">testSignupWithEmptyPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.SignUpAPI" class="method navigator-link" hash-for-method="testSignupWithEmptyPayload">testSignupWithEmptyPayload</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.SignUpAPI" class="method navigator-link" hash-for-method="testSignupWithNullPassword">testSignupWithNullPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.SignUpAPI" class="method navigator-link" hash-for-method="testSignupWithShortPassword">testSignupWithShortPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.SignUpAPI" class="method navigator-link" hash-for-method="testSignupWithoutEmail">testSignupWithoutEmail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.SignUpAPI" class="method navigator-link" hash-for-method="testSignupWithoutPassword">testSignupWithoutPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-MySuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
                     <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-MySuite" class="hide-methods passed suite-MySuite"> (hide)</a> <!-- hide-methods passed suite-MySuite -->
+                      <a href="#" panel-name="suite-MySuite" class="show-methods passed suite-MySuite"> (show)</a> <!-- show-methods passed suite-MySuite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content passed suite-MySuite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.pacakge.rest_assured_framework.DeleteBookApi" class="method navigator-link" hash-for-method="shouldDeleteBookSuccessfully">shouldDeleteBookSuccessfully</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.LoginApi" class="method navigator-link" hash-for-method="loginWithBlankFields">loginWithBlankFields</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.pacakge.rest_assured_framework.DeleteBookApi" class="method navigator-link" hash-for-method="shouldFailWithInvalidBookId">shouldFailWithInvalidBookId</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.LoginApi" class="method navigator-link" hash-for-method="loginWithBlankPassword">loginWithBlankPassword</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.pacakge.rest_assured_framework.DeleteBookApi" class="method navigator-link" hash-for-method="shouldFailWithoutAuthToken">shouldFailWithoutAuthToken</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.LoginApi" class="method navigator-link" hash-for-method="loginWithExtraField">loginWithExtraField</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.LoginApi" class="method navigator-link" hash-for-method="loginWithInvalidEmail">loginWithInvalidEmail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.LoginApi" class="method navigator-link" hash-for-method="loginWithInvalidPassword">loginWithInvalidPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.LoginApi" class="method navigator-link" hash-for-method="loginWithMalformedJson">loginWithMalformedJson</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.LoginApi" class="method navigator-link" hash-for-method="loginWithMissingEmailField">loginWithMissingEmailField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.LoginApi" class="method navigator-link" hash-for-method="loginWithMissingPasswordField">loginWithMissingPasswordField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.LoginApi" class="method navigator-link" hash-for-method="loginWithSqlInjectionInPassword">loginWithSqlInjectionInPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.LoginApi" class="method navigator-link" hash-for-method="loginWithValidCredentials">loginWithValidCredentials</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.HealthCheckAPI" class="method navigator-link" hash-for-method="shouldContainStatusKey">shouldContainStatusKey</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.CreateBookApi" class="method navigator-link" hash-for-method="shouldCreateBookSuccessfully">shouldCreateBookSuccessfully</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.DeleteBookApi" class="method navigator-link" hash-for-method="shouldDeleteBookSuccessfully">shouldDeleteBookSuccessfully</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.UpdateBookApi" class="method navigator-link" hash-for-method="shouldFailForInvalidBookId">shouldFailForInvalidBookId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.CreateBookApi" class="method navigator-link" hash-for-method="shouldFailWhenNameIsMissing">shouldFailWhenNameIsMissing</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.CreateBookApi" class="method navigator-link" hash-for-method="shouldFailWithDuplicateId">shouldFailWithDuplicateId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.CreateBookApi" class="method navigator-link" hash-for-method="shouldFailWithEmptyPayload">shouldFailWithEmptyPayload</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.DeleteBookApi" class="method navigator-link" hash-for-method="shouldFailWithInvalidBookId">shouldFailWithInvalidBookId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.CreateBookApi" class="method navigator-link" hash-for-method="shouldFailWithInvalidPublishedYear">shouldFailWithInvalidPublishedYear</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.GetAllBooksApi" class="method navigator-link" hash-for-method="shouldFailWithInvalidToken">shouldFailWithInvalidToken</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.DeleteBookApi" class="method navigator-link" hash-for-method="shouldFailWithoutAuthToken">shouldFailWithoutAuthToken</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.GetAllBooksApi" class="method navigator-link" hash-for-method="shouldFailWithoutAuthToken">shouldFailWithoutAuthToken</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.GetBookByIdApi" class="method navigator-link" hash-for-method="shouldGetBookByIdSuccessfully">shouldGetBookByIdSuccessfully</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.GetAllBooksApi" class="method navigator-link" hash-for-method="shouldHaveExpectedFieldsInBooks">shouldHaveExpectedFieldsInBooks</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.HealthCheckAPI" class="method navigator-link" hash-for-method="shouldNotAllowPostMethod">shouldNotAllowPostMethod</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.HealthCheckAPI" class="method navigator-link" hash-for-method="shouldReturn404ForInvalidEndpoint">shouldReturn404ForInvalidEndpoint</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.GetAllBooksApi" class="method navigator-link" hash-for-method="shouldReturn404ForInvalidEndpoint">shouldReturn404ForInvalidEndpoint</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.GetAllBooksApi" class="method navigator-link" hash-for-method="shouldReturnAllBooksSuccessfully">shouldReturnAllBooksSuccessfully</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.GetBookByIdApi" class="method navigator-link" hash-for-method="shouldReturnNotFoundForInvalidId">shouldReturnNotFoundForInvalidId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.HealthCheckAPI" class="method navigator-link" hash-for-method="shouldReturnStatus200">shouldReturnStatus200</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.HealthCheckAPI" class="method navigator-link" hash-for-method="shouldReturnStatusValueUp">shouldReturnStatusValueUp</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.SignUpAPI" class="method navigator-link" hash-for-method="testSignupSuccess">testSignupSuccess</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.SignUpAPI" class="method navigator-link" hash-for-method="testSignupWithComplexPassword">testSignupWithComplexPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.SignUpAPI" class="method navigator-link" hash-for-method="testSignupWithEmailContainingSpaces">testSignupWithEmailContainingSpaces</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.SignUpAPI" class="method navigator-link" hash-for-method="testSignupWithEmptyEmail">testSignupWithEmptyEmail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.SignUpAPI" class="method navigator-link" hash-for-method="testSignupWithExistingEmail">testSignupWithExistingEmail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.SignUpAPI" class="method navigator-link" hash-for-method="testSignupWithInvalidEmailFormat">testSignupWithInvalidEmailFormat</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-MySuite" title="com.pacakge.rest_assured_framework.SignUpAPI" class="method navigator-link" hash-for-method="testSignupWithVeryLongEmail">testSignupWithVeryLongEmail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-MySuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -127,8 +376,220 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+        <div panel-name="suite-MySuite" class="panel MySuite">
+          <div class="suite-MySuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.pacakge.rest_assured_framework.LoginApi</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithBlankEmail">
+                  </a> <!-- loginWithBlankEmail -->
+                  <span class="method-name">loginWithBlankEmail</span>
+                  <div class="stack-trace">java.lang.AssertionError: Expected 4xx for blank email expected [true] but found [false]
+	at com.pacakge.rest_assured_framework.LoginApi.loginWithBlankEmail(LoginApi.java:65)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify login fails when email field is blank.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MySuite-class-failed -->
+          <div class="suite-MySuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.pacakge.rest_assured_framework.GetBookByIdApi</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldReturnBadRequestForNonNumericId">
+                  </a> <!-- shouldReturnBadRequestForNonNumericId -->
+                  <span class="method-name">shouldReturnBadRequestForNonNumericId</span>
+                  <div class="stack-trace">java.lang.AssertionError: Expected HTTP 400 expected [400] but found [422]
+	at com.pacakge.rest_assured_framework.GetBookByIdApi.shouldReturnBadRequestForNonNumericId(GetBookByIdApi.java:55)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldReturnUnauthorizedWhenTokenIsMissing">
+                  </a> <!-- shouldReturnUnauthorizedWhenTokenIsMissing -->
+                  <span class="method-name">shouldReturnUnauthorizedWhenTokenIsMissing</span>
+                  <div class="stack-trace">java.lang.AssertionError: Expected HTTP 401 expected [401] but found [403]
+	at com.pacakge.rest_assured_framework.GetBookByIdApi.shouldReturnUnauthorizedWhenTokenIsMissing(GetBookByIdApi.java:68)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MySuite-class-failed -->
+          <div class="suite-MySuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.pacakge.rest_assured_framework.UpdateBookApi</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldFailWhenRequiredFieldMissing">
+                  </a> <!-- shouldFailWhenRequiredFieldMissing -->
+                  <span class="method-name">shouldFailWhenRequiredFieldMissing</span>
+                  <div class="stack-trace">java.lang.AssertionError: Expected 400 for missing required field expected [400] but found [404]
+	at com.pacakge.rest_assured_framework.UpdateBookApi.shouldFailWhenRequiredFieldMissing(UpdateBookApi.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldFailWithInvalidToken">
+                  </a> <!-- shouldFailWithInvalidToken -->
+                  <span class="method-name">shouldFailWithInvalidToken</span>
+                  <div class="stack-trace">java.lang.AssertionError: Expected 401 for invalid token expected [401] but found [403]
+	at com.pacakge.rest_assured_framework.UpdateBookApi.shouldFailWithInvalidToken(UpdateBookApi.java:136)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldFailWithoutToken">
+                  </a> <!-- shouldFailWithoutToken -->
+                  <span class="method-name">shouldFailWithoutToken</span>
+                  <div class="stack-trace">java.lang.AssertionError: Expected 401 for missing token expected [401] but found [403]
+	at com.pacakge.rest_assured_framework.UpdateBookApi.shouldFailWithoutToken(UpdateBookApi.java:113)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldUpdateBookSuccessfully">
+                  </a> <!-- shouldUpdateBookSuccessfully -->
+                  <span class="method-name">shouldUpdateBookSuccessfully</span>
+                  <div class="stack-trace">java.lang.AssertionError: Status code mismatch expected [200] but found [404]
+	at com.pacakge.rest_assured_framework.UpdateBookApi.shouldUpdateBookSuccessfully(UpdateBookApi.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MySuite-class-failed -->
+          <div class="suite-MySuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.pacakge.rest_assured_framework.SignUpAPI</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSignupWithEmptyPassword">
+                  </a> <!-- testSignupWithEmptyPassword -->
+                  <span class="method-name">testSignupWithEmptyPassword</span>
+                  <div class="stack-trace">java.lang.AssertionError: Unexpected status code. Response: {
+    &quot;message&quot;: &quot;User created successfully&quot;
+} expected [400] but found [200]
+	at com.pacakge.rest_assured_framework.SignUpAPI.assertResponse(SignUpAPI.java:42)
+	at com.pacakge.rest_assured_framework.SignUpAPI.testSignupWithEmptyPassword(SignUpAPI.java:145)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify signup fails when password is empty.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSignupWithEmptyPayload">
+                  </a> <!-- testSignupWithEmptyPayload -->
+                  <span class="method-name">testSignupWithEmptyPayload</span>
+                  <div class="stack-trace">java.lang.AssertionError: Unexpected status code. Response: Internal Server Error expected [400] but found [500]
+	at com.pacakge.rest_assured_framework.SignUpAPI.assertResponse(SignUpAPI.java:42)
+	at com.pacakge.rest_assured_framework.SignUpAPI.testSignupWithEmptyPayload(SignUpAPI.java:181)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify signup fails with an empty request payload.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSignupWithNullPassword">
+                  </a> <!-- testSignupWithNullPassword -->
+                  <span class="method-name">testSignupWithNullPassword</span>
+                  <div class="stack-trace">java.lang.AssertionError: Unexpected status code. Response: Internal Server Error expected [400] but found [500]
+	at com.pacakge.rest_assured_framework.SignUpAPI.assertResponse(SignUpAPI.java:42)
+	at com.pacakge.rest_assured_framework.SignUpAPI.testSignupWithNullPassword(SignUpAPI.java:158)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify signup fails when password is null.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSignupWithShortPassword">
+                  </a> <!-- testSignupWithShortPassword -->
+                  <span class="method-name">testSignupWithShortPassword</span>
+                  <div class="stack-trace">java.lang.AssertionError: Unexpected status code. Response: {
+    &quot;message&quot;: &quot;User created successfully&quot;
+} expected [400] but found [200]
+	at com.pacakge.rest_assured_framework.SignUpAPI.assertResponse(SignUpAPI.java:42)
+	at com.pacakge.rest_assured_framework.SignUpAPI.testSignupWithShortPassword(SignUpAPI.java:171)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify signup fails when password is shorter than required length.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSignupWithoutEmail">
+                  </a> <!-- testSignupWithoutEmail -->
+                  <span class="method-name">testSignupWithoutEmail</span>
+                  <div class="stack-trace">java.lang.AssertionError: Unexpected status code. Response: Internal Server Error expected [400] but found [500]
+	at com.pacakge.rest_assured_framework.SignUpAPI.assertResponse(SignUpAPI.java:42)
+	at com.pacakge.rest_assured_framework.SignUpAPI.testSignupWithoutEmail(SignUpAPI.java:192)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify signup fails when email is missing.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSignupWithoutPassword">
+                  </a> <!-- testSignupWithoutPassword -->
+                  <span class="method-name">testSignupWithoutPassword</span>
+                  <div class="stack-trace">java.lang.AssertionError: Unexpected status code. Response: Internal Server Error expected [400] but found [500]
+	at com.pacakge.rest_assured_framework.SignUpAPI.assertResponse(SignUpAPI.java:42)
+	at com.pacakge.rest_assured_framework.SignUpAPI.testSignupWithoutPassword(SignUpAPI.java:203)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Verify signup fails when password is missing.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MySuite-class-failed -->
+          <div class="suite-MySuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">com.pacakge.rest_assured_framework.DeleteBookApi</span>
@@ -156,52 +617,495 @@
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
-        </div> <!-- panel Default_suite -->
-        <div panel-name="test-xml-Default_suite" class="panel">
+          </div> <!-- suite-MySuite-class-passed -->
+          <div class="suite-MySuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.pacakge.rest_assured_framework.LoginApi</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithBlankFields">
+                  </a> <!-- loginWithBlankFields -->
+                  <span class="method-name">loginWithBlankFields</span>
+                  <em>
+(Verify login fails when both email and password fields are blank.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithBlankPassword">
+                  </a> <!-- loginWithBlankPassword -->
+                  <span class="method-name">loginWithBlankPassword</span>
+                  <em>
+(Verify login fails when password field is blank.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithExtraField">
+                  </a> <!-- loginWithExtraField -->
+                  <span class="method-name">loginWithExtraField</span>
+                  <em>
+(Verify login behavior when an unexpected extra field is sent.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithInvalidEmail">
+                  </a> <!-- loginWithInvalidEmail -->
+                  <span class="method-name">loginWithInvalidEmail</span>
+                  <em>
+(Verify login fails with an unregistered email.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithInvalidPassword">
+                  </a> <!-- loginWithInvalidPassword -->
+                  <span class="method-name">loginWithInvalidPassword</span>
+                  <em>
+(Verify login fails with incorrect password.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithMalformedJson">
+                  </a> <!-- loginWithMalformedJson -->
+                  <span class="method-name">loginWithMalformedJson</span>
+                  <em>
+(Verify login fails when request JSON is malformed.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithMissingEmailField">
+                  </a> <!-- loginWithMissingEmailField -->
+                  <span class="method-name">loginWithMissingEmailField</span>
+                  <em>
+(Verify login fails when email field is missing from payload.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithMissingPasswordField">
+                  </a> <!-- loginWithMissingPasswordField -->
+                  <span class="method-name">loginWithMissingPasswordField</span>
+                  <em>
+(Verify login fails when password field is missing from payload.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithSqlInjectionInPassword">
+                  </a> <!-- loginWithSqlInjectionInPassword -->
+                  <span class="method-name">loginWithSqlInjectionInPassword</span>
+                  <em>
+(Verify login fails when SQL injection is attempted in the password field.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginWithValidCredentials">
+                  </a> <!-- loginWithValidCredentials -->
+                  <span class="method-name">loginWithValidCredentials</span>
+                  <em>
+(Verify login succeeds with valid credentials.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MySuite-class-passed -->
+          <div class="suite-MySuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.pacakge.rest_assured_framework.UpdateBookApi</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldFailForInvalidBookId">
+                  </a> <!-- shouldFailForInvalidBookId -->
+                  <span class="method-name">shouldFailForInvalidBookId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MySuite-class-passed -->
+          <div class="suite-MySuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.pacakge.rest_assured_framework.GetBookByIdApi</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldGetBookByIdSuccessfully">
+                  </a> <!-- shouldGetBookByIdSuccessfully -->
+                  <span class="method-name">shouldGetBookByIdSuccessfully</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldReturnNotFoundForInvalidId">
+                  </a> <!-- shouldReturnNotFoundForInvalidId -->
+                  <span class="method-name">shouldReturnNotFoundForInvalidId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MySuite-class-passed -->
+          <div class="suite-MySuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.pacakge.rest_assured_framework.CreateBookApi</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldCreateBookSuccessfully">
+                  </a> <!-- shouldCreateBookSuccessfully -->
+                  <span class="method-name">shouldCreateBookSuccessfully</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldFailWhenNameIsMissing">
+                  </a> <!-- shouldFailWhenNameIsMissing -->
+                  <span class="method-name">shouldFailWhenNameIsMissing</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldFailWithDuplicateId">
+                  </a> <!-- shouldFailWithDuplicateId -->
+                  <span class="method-name">shouldFailWithDuplicateId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldFailWithEmptyPayload">
+                  </a> <!-- shouldFailWithEmptyPayload -->
+                  <span class="method-name">shouldFailWithEmptyPayload</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldFailWithInvalidPublishedYear">
+                  </a> <!-- shouldFailWithInvalidPublishedYear -->
+                  <span class="method-name">shouldFailWithInvalidPublishedYear</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MySuite-class-passed -->
+          <div class="suite-MySuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.pacakge.rest_assured_framework.HealthCheckAPI</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldContainStatusKey">
+                  </a> <!-- shouldContainStatusKey -->
+                  <span class="method-name">shouldContainStatusKey</span>
+                  <em>
+(Verify /health JSON contains 'status' key)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldNotAllowPostMethod">
+                  </a> <!-- shouldNotAllowPostMethod -->
+                  <span class="method-name">shouldNotAllowPostMethod</span>
+                  <em>
+(Verify POST on /health returns 405)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldReturn404ForInvalidEndpoint">
+                  </a> <!-- shouldReturn404ForInvalidEndpoint -->
+                  <span class="method-name">shouldReturn404ForInvalidEndpoint</span>
+                  <em>
+(Verify GET /healthz returns 404)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldReturnStatus200">
+                  </a> <!-- shouldReturnStatus200 -->
+                  <span class="method-name">shouldReturnStatus200</span>
+                  <em>
+(Verify GET /health returns 200)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldReturnStatusValueUp">
+                  </a> <!-- shouldReturnStatusValueUp -->
+                  <span class="method-name">shouldReturnStatusValueUp</span>
+                  <em>
+(Verify status value is 'up')                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MySuite-class-passed -->
+          <div class="suite-MySuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.pacakge.rest_assured_framework.SignUpAPI</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSignupSuccess">
+                  </a> <!-- testSignupSuccess -->
+                  <span class="method-name">testSignupSuccess</span>
+                  <em>
+(Verify that a new user can successfully sign up with valid email and password.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSignupWithComplexPassword">
+                  </a> <!-- testSignupWithComplexPassword -->
+                  <span class="method-name">testSignupWithComplexPassword</span>
+                  <em>
+(Verify signup works with a complex password containing special characters.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSignupWithEmailContainingSpaces">
+                  </a> <!-- testSignupWithEmailContainingSpaces -->
+                  <span class="method-name">testSignupWithEmailContainingSpaces</span>
+                  <em>
+(Verify signup fails when email contains spaces.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSignupWithEmptyEmail">
+                  </a> <!-- testSignupWithEmptyEmail -->
+                  <span class="method-name">testSignupWithEmptyEmail</span>
+                  <em>
+(Verify signup fails when email is empty.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSignupWithExistingEmail">
+                  </a> <!-- testSignupWithExistingEmail -->
+                  <span class="method-name">testSignupWithExistingEmail</span>
+                  <em>
+(Verify signup fails for an already registered email.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSignupWithInvalidEmailFormat">
+                  </a> <!-- testSignupWithInvalidEmailFormat -->
+                  <span class="method-name">testSignupWithInvalidEmailFormat</span>
+                  <em>
+(Verify signup fails for invalid email format.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSignupWithVeryLongEmail">
+                  </a> <!-- testSignupWithVeryLongEmail -->
+                  <span class="method-name">testSignupWithVeryLongEmail</span>
+                  <em>
+(Verify signup fails when email exceeds maximum allowed length.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MySuite-class-passed -->
+          <div class="suite-MySuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.pacakge.rest_assured_framework.GetAllBooksApi</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldFailWithInvalidToken">
+                  </a> <!-- shouldFailWithInvalidToken -->
+                  <span class="method-name">shouldFailWithInvalidToken</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldFailWithoutAuthToken">
+                  </a> <!-- shouldFailWithoutAuthToken -->
+                  <span class="method-name">shouldFailWithoutAuthToken</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldHaveExpectedFieldsInBooks">
+                  </a> <!-- shouldHaveExpectedFieldsInBooks -->
+                  <span class="method-name">shouldHaveExpectedFieldsInBooks</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldReturn404ForInvalidEndpoint">
+                  </a> <!-- shouldReturn404ForInvalidEndpoint -->
+                  <span class="method-name">shouldReturn404ForInvalidEndpoint</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldReturnAllBooksSuccessfully">
+                  </a> <!-- shouldReturnAllBooksSuccessfully -->
+                  <span class="method-name">shouldReturnAllBooksSuccessfully</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-MySuite-class-passed -->
+        </div> <!-- panel MySuite -->
+        <div panel-name="test-xml-MySuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/2c/qp76hpgj0dlfxzg75b1246300000gn/T/testng-eclipse--1105533678/testng-customsuite.xml</span>
+            <span class="header-content">/Users/rajatagarwal/git/ResAssured_Playground/testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
+&lt;suite name=&quot;MySuite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;io.qameta.allure.testng.AllureTestNg&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Integration&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;com.pacakge.rest_assured_framework.HealthCheckAPI&quot;/&gt;
+      &lt;class name=&quot;com.pacakge.rest_assured_framework.SignUpAPI&quot;/&gt;
+      &lt;class name=&quot;com.pacakge.rest_assured_framework.LoginApi&quot;/&gt;
+      &lt;class name=&quot;com.pacakge.rest_assured_framework.GetAllBooksApi&quot;/&gt;
+      &lt;class name=&quot;com.pacakge.rest_assured_framework.CreateBookApi&quot;/&gt;
+      &lt;class name=&quot;com.pacakge.rest_assured_framework.GetBookByIdApi&quot;/&gt;
+      &lt;class name=&quot;com.pacakge.rest_assured_framework.UpdateBookApi&quot;/&gt;
       &lt;class name=&quot;com.pacakge.rest_assured_framework.DeleteBookApi&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Default test --&gt;
-&lt;/suite&gt; &lt;!-- Default suite --&gt;
+  &lt;/test&gt; &lt;!-- Integration --&gt;
+&lt;/suite&gt; &lt;!-- MySuite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Default_suite" class="panel">
+        <div panel-name="testlist-MySuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Default suite</span>
+            <span class="header-content">Tests for MySuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">Integration (8 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Default_suite" class="panel">
+        <div panel-name="group-MySuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Default suite</span>
+            <span class="header-content">Groups for MySuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
               <span class="test-group-name">negative</span>
               <br/>
               <div class="method-in-group">
+                <span class="method-in-group-name">loginWithBlankEmail</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginWithBlankFields</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginWithBlankPassword</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginWithExtraField</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginWithInvalidEmail</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginWithInvalidPassword</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginWithMalformedJson</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginWithMissingEmailField</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginWithMissingPasswordField</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginWithSqlInjectionInPassword</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldFailForInvalidBookId</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldFailWhenNameIsMissing</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldFailWhenRequiredFieldMissing</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldFailWithDuplicateId</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldFailWithEmptyPayload</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
                 <span class="method-in-group-name">shouldFailWithInvalidBookId</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
+                <span class="method-in-group-name">shouldFailWithInvalidPublishedYear</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldFailWithInvalidToken</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
                 <span class="method-in-group-name">shouldFailWithoutAuthToken</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldFailWithoutToken</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldReturn404ForInvalidEndpoint</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldReturnBadRequestForNonNumericId</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldReturnNotFoundForInvalidId</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldReturnUnauthorizedWhenTokenIsMissing</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -209,7 +1113,31 @@
               <span class="test-group-name">positive</span>
               <br/>
               <div class="method-in-group">
+                <span class="method-in-group-name">loginWithValidCredentials</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldCreateBookSuccessfully</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
                 <span class="method-in-group-name">shouldDeleteBookSuccessfully</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldGetBookByIdSuccessfully</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldHaveExpectedFieldsInBooks</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldReturnAllBooksSuccessfully</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldUpdateBookSuccessfully</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -217,85 +1145,568 @@
               <span class="test-group-name">sanity</span>
               <br/>
               <div class="method-in-group">
+                <span class="method-in-group-name">loginWithValidCredentials</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldCreateBookSuccessfully</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
                 <span class="method-in-group-name">shouldDeleteBookSuccessfully</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldGetBookByIdSuccessfully</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldHaveExpectedFieldsInBooks</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldReturnAllBooksSuccessfully</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">shouldUpdateBookSuccessfully</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Default_suite" class="panel">
+        <div panel-name="times-MySuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Default suite</span>
+            <span class="header-content">Times for MySuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Default_suite');
-function tableData_Default_suite() {
+suiteTableInitFunctions.push('tableData_MySuite');
+function tableData_MySuite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(51);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'shouldDeleteBookSuccessfully')
-data.setCell(0, 2, 'com.pacakge.rest_assured_framework.DeleteBookApi')
-data.setCell(0, 3, 2848);
+data.setCell(0, 1, 'shouldReturnStatus200')
+data.setCell(0, 2, 'com.pacakge.rest_assured_framework.HealthCheckAPI')
+data.setCell(0, 3, 1383);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'shouldFailWithInvalidBookId')
-data.setCell(1, 2, 'com.pacakge.rest_assured_framework.DeleteBookApi')
-data.setCell(1, 3, 47);
+data.setCell(1, 1, 'shouldReturnStatusValueUp')
+data.setCell(1, 2, 'com.pacakge.rest_assured_framework.HealthCheckAPI')
+data.setCell(1, 3, 546);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'shouldFailWithoutAuthToken')
-data.setCell(2, 2, 'com.pacakge.rest_assured_framework.DeleteBookApi')
-data.setCell(2, 3, 24);
-window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+data.setCell(2, 1, 'shouldReturnAllBooksSuccessfully')
+data.setCell(2, 2, 'com.pacakge.rest_assured_framework.GetAllBooksApi')
+data.setCell(2, 3, 403);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testSignupSuccess')
+data.setCell(3, 2, 'com.pacakge.rest_assured_framework.SignUpAPI')
+data.setCell(3, 3, 370);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'loginWithValidCredentials')
+data.setCell(4, 2, 'com.pacakge.rest_assured_framework.LoginApi')
+data.setCell(4, 3, 346);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testSignupWithExistingEmail')
+data.setCell(5, 2, 'com.pacakge.rest_assured_framework.SignUpAPI')
+data.setCell(5, 3, 325);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testSignupWithComplexPassword')
+data.setCell(6, 2, 'com.pacakge.rest_assured_framework.SignUpAPI')
+data.setCell(6, 3, 297);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'shouldContainStatusKey')
+data.setCell(7, 2, 'com.pacakge.rest_assured_framework.HealthCheckAPI')
+data.setCell(7, 3, 296);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'loginWithInvalidPassword')
+data.setCell(8, 2, 'com.pacakge.rest_assured_framework.LoginApi')
+data.setCell(8, 3, 282);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'loginWithBlankFields')
+data.setCell(9, 2, 'com.pacakge.rest_assured_framework.LoginApi')
+data.setCell(9, 3, 278);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'loginWithBlankEmail')
+data.setCell(10, 2, 'com.pacakge.rest_assured_framework.LoginApi')
+data.setCell(10, 3, 277);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'shouldHaveExpectedFieldsInBooks')
+data.setCell(11, 2, 'com.pacakge.rest_assured_framework.GetAllBooksApi')
+data.setCell(11, 3, 276);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'testSignupWithoutEmail')
+data.setCell(12, 2, 'com.pacakge.rest_assured_framework.SignUpAPI')
+data.setCell(12, 3, 276);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'testSignupWithEmptyPassword')
+data.setCell(13, 2, 'com.pacakge.rest_assured_framework.SignUpAPI')
+data.setCell(13, 3, 275);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'loginWithBlankPassword')
+data.setCell(14, 2, 'com.pacakge.rest_assured_framework.LoginApi')
+data.setCell(14, 3, 274);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'loginWithExtraField')
+data.setCell(15, 2, 'com.pacakge.rest_assured_framework.LoginApi')
+data.setCell(15, 3, 274);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'testSignupWithShortPassword')
+data.setCell(16, 2, 'com.pacakge.rest_assured_framework.SignUpAPI')
+data.setCell(16, 3, 267);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'loginWithSqlInjectionInPassword')
+data.setCell(17, 2, 'com.pacakge.rest_assured_framework.LoginApi')
+data.setCell(17, 3, 263);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'shouldGetBookByIdSuccessfully')
+data.setCell(18, 2, 'com.pacakge.rest_assured_framework.GetBookByIdApi')
+data.setCell(18, 3, 137);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'shouldReturnUnauthorizedWhenTokenIsMissing')
+data.setCell(19, 2, 'com.pacakge.rest_assured_framework.GetBookByIdApi')
+data.setCell(19, 3, 80);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'testSignupWithEmailContainingSpaces')
+data.setCell(20, 2, 'com.pacakge.rest_assured_framework.SignUpAPI')
+data.setCell(20, 3, 67);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'shouldCreateBookSuccessfully')
+data.setCell(21, 2, 'com.pacakge.rest_assured_framework.CreateBookApi')
+data.setCell(21, 3, 59);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'testSignupWithEmptyEmail')
+data.setCell(22, 2, 'com.pacakge.rest_assured_framework.SignUpAPI')
+data.setCell(22, 3, 57);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'shouldNotAllowPostMethod')
+data.setCell(23, 2, 'com.pacakge.rest_assured_framework.HealthCheckAPI')
+data.setCell(23, 3, 55);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'testSignupWithoutPassword')
+data.setCell(24, 2, 'com.pacakge.rest_assured_framework.SignUpAPI')
+data.setCell(24, 3, 49);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'shouldDeleteBookSuccessfully')
+data.setCell(25, 2, 'com.pacakge.rest_assured_framework.DeleteBookApi')
+data.setCell(25, 3, 44);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'testSignupWithInvalidEmailFormat')
+data.setCell(26, 2, 'com.pacakge.rest_assured_framework.SignUpAPI')
+data.setCell(26, 3, 41);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'testSignupWithEmptyPayload')
+data.setCell(27, 2, 'com.pacakge.rest_assured_framework.SignUpAPI')
+data.setCell(27, 3, 37);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'testSignupWithVeryLongEmail')
+data.setCell(28, 2, 'com.pacakge.rest_assured_framework.SignUpAPI')
+data.setCell(28, 3, 36);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'testSignupWithNullPassword')
+data.setCell(29, 2, 'com.pacakge.rest_assured_framework.SignUpAPI')
+data.setCell(29, 3, 36);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'shouldReturn404ForInvalidEndpoint')
+data.setCell(30, 2, 'com.pacakge.rest_assured_framework.GetAllBooksApi')
+data.setCell(30, 3, 35);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'shouldFailWithoutAuthToken')
+data.setCell(31, 2, 'com.pacakge.rest_assured_framework.GetAllBooksApi')
+data.setCell(31, 3, 33);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'loginWithInvalidEmail')
+data.setCell(32, 2, 'com.pacakge.rest_assured_framework.LoginApi')
+data.setCell(32, 3, 32);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'shouldUpdateBookSuccessfully')
+data.setCell(33, 2, 'com.pacakge.rest_assured_framework.UpdateBookApi')
+data.setCell(33, 3, 32);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'shouldReturnNotFoundForInvalidId')
+data.setCell(34, 2, 'com.pacakge.rest_assured_framework.GetBookByIdApi')
+data.setCell(34, 3, 31);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'loginWithMalformedJson')
+data.setCell(35, 2, 'com.pacakge.rest_assured_framework.LoginApi')
+data.setCell(35, 3, 31);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'shouldFailWithInvalidBookId')
+data.setCell(36, 2, 'com.pacakge.rest_assured_framework.DeleteBookApi')
+data.setCell(36, 3, 30);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'shouldFailWithoutAuthToken')
+data.setCell(37, 2, 'com.pacakge.rest_assured_framework.DeleteBookApi')
+data.setCell(37, 3, 30);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'loginWithMissingEmailField')
+data.setCell(38, 2, 'com.pacakge.rest_assured_framework.LoginApi')
+data.setCell(38, 3, 29);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'shouldFailWithDuplicateId')
+data.setCell(39, 2, 'com.pacakge.rest_assured_framework.CreateBookApi')
+data.setCell(39, 3, 28);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'shouldFailForInvalidBookId')
+data.setCell(40, 2, 'com.pacakge.rest_assured_framework.UpdateBookApi')
+data.setCell(40, 3, 27);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'shouldFailWithInvalidPublishedYear')
+data.setCell(41, 2, 'com.pacakge.rest_assured_framework.CreateBookApi')
+data.setCell(41, 3, 26);
+data.setCell(42, 0, 42)
+data.setCell(42, 1, 'loginWithMissingPasswordField')
+data.setCell(42, 2, 'com.pacakge.rest_assured_framework.LoginApi')
+data.setCell(42, 3, 25);
+data.setCell(43, 0, 43)
+data.setCell(43, 1, 'shouldFailWithInvalidToken')
+data.setCell(43, 2, 'com.pacakge.rest_assured_framework.GetAllBooksApi')
+data.setCell(43, 3, 24);
+data.setCell(44, 0, 44)
+data.setCell(44, 1, 'shouldFailWhenNameIsMissing')
+data.setCell(44, 2, 'com.pacakge.rest_assured_framework.CreateBookApi')
+data.setCell(44, 3, 23);
+data.setCell(45, 0, 45)
+data.setCell(45, 1, 'shouldReturn404ForInvalidEndpoint')
+data.setCell(45, 2, 'com.pacakge.rest_assured_framework.HealthCheckAPI')
+data.setCell(45, 3, 22);
+data.setCell(46, 0, 46)
+data.setCell(46, 1, 'shouldFailWithInvalidToken')
+data.setCell(46, 2, 'com.pacakge.rest_assured_framework.UpdateBookApi')
+data.setCell(46, 3, 22);
+data.setCell(47, 0, 47)
+data.setCell(47, 1, 'shouldFailWithoutToken')
+data.setCell(47, 2, 'com.pacakge.rest_assured_framework.UpdateBookApi')
+data.setCell(47, 3, 19);
+data.setCell(48, 0, 48)
+data.setCell(48, 1, 'shouldReturnBadRequestForNonNumericId')
+data.setCell(48, 2, 'com.pacakge.rest_assured_framework.GetBookByIdApi')
+data.setCell(48, 3, 18);
+data.setCell(49, 0, 49)
+data.setCell(49, 1, 'shouldFailWhenRequiredFieldMissing')
+data.setCell(49, 2, 'com.pacakge.rest_assured_framework.UpdateBookApi')
+data.setCell(49, 3, 16);
+data.setCell(50, 0, 50)
+data.setCell(50, 1, 'shouldFailWithEmptyPayload')
+data.setCell(50, 2, 'com.pacakge.rest_assured_framework.CreateBookApi')
+data.setCell(50, 3, 12);
+window.suiteTableData['MySuite']= { tableData: data, tableDiv: 'times-div-MySuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
-              <div id="times-div-Default_suite">
-              </div> <!-- times-div-Default_suite -->
+              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <div id="times-div-MySuite">
+              </div> <!-- times-div-MySuite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Default_suite" class="panel">
+        <div panel-name="reporter-MySuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Default suite</span>
+            <span class="header-content">Reporter output for MySuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Default_suite" class="panel">
+        <div panel-name="ignored-methods-MySuite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Default_suite" class="panel">
+        <div panel-name="chronological-MySuite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.pacakge.rest_assured_framework.DeleteBookApi</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.pacakge.rest_assured_framework.HealthCheckAPI</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">shouldDeleteBookSuccessfully</span>
-                <span class="method-start">510 ms</span>
+                <span class="method-name">shouldReturnStatus200</span>
+                <span class="method-start">493 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">shouldFailWithInvalidBookId</span>
-                <span class="method-start">3433 ms</span>
+                <span class="method-name">shouldContainStatusKey</span>
+                <span class="method-start">1949 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">shouldReturnStatusValueUp</span>
+                <span class="method-start">2258 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">shouldNotAllowPostMethod</span>
+                <span class="method-start">2810 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">shouldReturn404ForInvalidEndpoint</span>
+                <span class="method-start">2868 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.pacakge.rest_assured_framework.SignUpAPI</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">2896 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testSignupSuccess</span>
+                <span class="method-start">2898 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSignupWithComplexPassword</span>
+                <span class="method-start">3279 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSignupWithExistingEmail</span>
+                <span class="method-start">3583 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSignupWithEmptyEmail</span>
+                <span class="method-start">3913 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSignupWithInvalidEmailFormat</span>
+                <span class="method-start">3975 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testSignupWithEmptyPassword</span>
+                <span class="method-start">4019 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testSignupWithNullPassword</span>
+                <span class="method-start">4303 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testSignupWithShortPassword</span>
+                <span class="method-start">4344 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testSignupWithEmptyPayload</span>
+                <span class="method-start">4617 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testSignupWithoutEmail</span>
+                <span class="method-start">4662 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testSignupWithoutPassword</span>
+                <span class="method-start">4945 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSignupWithEmailContainingSpaces</span>
+                <span class="method-start">5002 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSignupWithVeryLongEmail</span>
+                <span class="method-start">5073 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.pacakge.rest_assured_framework.LoginApi</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">5113 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">loginWithValidCredentials</span>
+                <span class="method-start">5118 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginWithInvalidEmail</span>
+                <span class="method-start">5472 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginWithInvalidPassword</span>
+                <span class="method-start">5509 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginWithBlankEmail</span>
+                <span class="method-start">5800 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginWithBlankPassword</span>
+                <span class="method-start">6079 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginWithBlankFields</span>
+                <span class="method-start">6361 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginWithMissingEmailField</span>
+                <span class="method-start">6643 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginWithMissingPasswordField</span>
+                <span class="method-start">6676 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginWithExtraField</span>
+                <span class="method-start">6705 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginWithMalformedJson</span>
+                <span class="method-start">6984 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginWithSqlInjectionInPassword</span>
+                <span class="method-start">7020 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.pacakge.rest_assured_framework.GetAllBooksApi</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">7287 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">shouldReturnAllBooksSuccessfully</span>
+                <span class="method-start">7288 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">shouldFailWithoutAuthToken</span>
-                <span class="method-start">3487 ms</span>
+                <span class="method-start">7696 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">shouldFailWithInvalidToken</span>
+                <span class="method-start">7731 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">shouldHaveExpectedFieldsInBooks</span>
+                <span class="method-start">7758 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">shouldReturn404ForInvalidEndpoint</span>
+                <span class="method-start">8044 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.pacakge.rest_assured_framework.CreateBookApi</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">8080 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">shouldCreateBookSuccessfully</span>
+                <span class="method-start">8081 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">shouldFailWhenNameIsMissing</span>
+                <span class="method-start">8142 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">shouldFailWithInvalidPublishedYear</span>
+                <span class="method-start">8167 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">shouldFailWithDuplicateId</span>
+                <span class="method-start">8194 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">shouldFailWithEmptyPayload</span>
+                <span class="method-start">8223 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.pacakge.rest_assured_framework.GetBookByIdApi</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">8236 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">shouldGetBookByIdSuccessfully</span>
+                <span class="method-start">8238 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">shouldReturnNotFoundForInvalidId</span>
+                <span class="method-start">8377 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">shouldReturnBadRequestForNonNumericId</span>
+                <span class="method-start">8410 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">shouldReturnUnauthorizedWhenTokenIsMissing</span>
+                <span class="method-start">8432 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.pacakge.rest_assured_framework.UpdateBookApi</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">8517 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">shouldUpdateBookSuccessfully</span>
+                <span class="method-start">8518 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">shouldFailForInvalidBookId</span>
+                <span class="method-start">8552 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">shouldFailWhenRequiredFieldMissing</span>
+                <span class="method-start">8581 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">shouldFailWithoutToken</span>
+                <span class="method-start">8600 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">shouldFailWithInvalidToken</span>
+                <span class="method-start">8622 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.pacakge.rest_assured_framework.DeleteBookApi</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">8648 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">shouldDeleteBookSuccessfully</span>
+                <span class="method-start">8649 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">shouldFailWithInvalidBookId</span>
+                <span class="method-start">8695 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">shouldFailWithoutAuthToken</span>
+                <span class="method-start">8735 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

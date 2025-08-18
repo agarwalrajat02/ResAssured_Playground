@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.pacakge.rest_assured_framework.DeleteBookApi">
+      <class name="com.pacakge.rest_assured_framework.GetBookByIdApi">
         <methods>
-          <include name="shouldFailToDeleteNonNumericBookId"/>
-          <include name="shouldFailToDeleteInvalidBookId"/>
-          <include name="shouldFailToDeleteNegativeBookId"/>
           <include name="setup"/>
-          <include name="shouldDeleteBookSuccessfully"/>
+          <include name="shouldReturnUnauthorizedWhenTokenIsMissing"/>
+          <include name="shouldReturnBadRequestForNonNumericId"/>
         </methods>
-      </class> <!-- com.pacakge.rest_assured_framework.DeleteBookApi -->
+      </class> <!-- com.pacakge.rest_assured_framework.GetBookByIdApi -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
